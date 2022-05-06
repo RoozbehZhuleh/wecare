@@ -1,0 +1,108 @@
+@import "./layout.scss";
+
+.search{
+    position: absolute;
+    @include flex(column, space-around, center);
+    gap: 2rem;
+    width: 70%;
+    top: 63%;
+    left: 20%;
+    background-color: $light-color;
+    padding: 2rem 0;
+
+    &__bars{
+        @include flex(row, space-around, center);
+        width: 95%;
+        gap: 1rem;
+        
+        &--doctor{
+                @include flex(row, flex-start, center);
+                width: 45%;
+                border: 1px solid black;
+                padding: 0.5rem;
+                background-color: $primary-color;
+                border-radius: map-get($border-radius, "s");
+
+                input{
+                    width: 85%;
+                    padding: 0.8rem 8rem;
+                    border: none;
+                    background-color: $primary-color;
+                }
+        }
+
+        &--location{
+            @include flex(row, flex-start, center);
+            width: 45%;
+            border: 1px solid black;
+            padding: 0.5rem;
+            background-color: $primary-color;
+            border-radius: map-get($border-radius, "s");
+
+            input{
+                width: 85%;
+                padding: 1rem 8rem;
+                border: none;
+                background-color: $primary-color;
+            }
+        }
+        
+
+        &--btn{
+            @include btn;
+            width: 10%;
+            border: 1px solid $accent-color;
+
+            &:hover{
+                background-color: $accent-color;
+            }
+
+            img{
+                width: 60%;
+            }
+        }
+    }
+
+    &__looking{
+        @include flex(column, space-around, flex-start);
+
+        h3{
+            color: $dark-color;
+            margin: 1rem 0;
+        }
+
+        &__tags{
+            @include flex(row, center, center);
+            gap: 1rem;
+            
+            button{
+                @include btn;
+                background-color: $third-color;
+                text-decoration: none;
+                color: $accent-color;
+            }
+
+
+            .tag__wrapper{
+                @include flex(row, flex-start, center);
+                cursor: pointer;
+                padding: 0.5rem;
+                border-radius: map-get($border-radius, "m" );
+                background-color: $primary-color;
+
+                p{
+                    font-size: map-get($font-size, "m");
+                    color: $accent-color;
+                }
+
+                img{
+                    width: 1.8rem;
+                }
+
+            }
+        }
+    }
+
+
+
+}

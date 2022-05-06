@@ -1,0 +1,175 @@
+@import "./layout.scss";
+
+
+.hero{
+    @include flex(row,center,center);
+    position: absolute;
+    background: rgb(216,232,255);
+    background: linear-gradient(0deg, rgba(216,232,255,1) 0%, rgba(249,251,255,1) 100%);
+    z-index: -5;
+
+        &__text{
+            @include flex(column,flex-start,center);
+            width: 50vw;
+            gap: 2rem;
+
+            &--large{
+                text-align: center;
+                width: 60%;
+                font-size: map-get($font-size , "xl" );
+                color: map-get($font-color , "primary");
+            }
+
+            &--small{
+                text-align: center;
+                width: 60%;
+                font-size: map-get($font-size , "m");
+                color: map-get($font-color , "other")
+            }
+
+
+            &__testimonial{
+                @include flex(row, space-around, center);
+                width: 55%;
+                gap: 1rem;
+            
+                .doctor-profiles{
+                    width: 50%;
+                    @include flex(row,flex-start, center);
+                    font-size: map-get($font-size , "m" );
+                    background-color: $accent-color;
+                    padding: 1rem;
+                    border-radius: map-get($border-radius, "s" );
+
+                    &__image{
+                        width: 20%;
+
+                        img{
+                            width: 80%;
+                        }
+                    }
+
+                    &__text{
+                        width: 80%;
+                        color: map-get($font-color , "secondary");
+                    }
+                }
+
+                .patient-ratings{
+                    width: 50%;
+                    @include flex(row, flex-start, center);
+                    font-size: map-get($font-size , "m" );
+                    background-color: $accent-color;
+                    padding: 1rem;
+                    border-radius: map-get($border-radius, "s" );
+                    
+                    &__image{
+                        width: 20%;
+
+                        img{
+                            width: 80%;
+                        }
+                    }
+
+                    &__text{
+                        width: 80%;
+                        color: map-get($font-color , "secondary");
+                    }
+                
+                }
+            }
+
+
+            
+        }
+
+
+
+
+
+        &__image{
+            width: 60vw;
+            position: relative;
+            left: -8%;
+            z-index: 5;
+
+            &__circle--1{
+                @include circle;
+                  width: 45%;
+                  height: 65%;
+                  top: 20%;
+                  left: 30%;
+                  z-index: -1;
+
+                .icon--1{
+                    position: absolute;
+                    width: 10%;
+                    border-radius: 100%;
+                    background-color: $light-color;
+                    padding: 1rem;
+                    z-index: 1;
+                    top: 16%;
+                    left: 2%;
+                }
+
+              }
+  
+              &__circle--2{
+                  @include circle;
+                  width: 55%;
+                  height: 80%;
+                  top: 12%;
+                  left:25%;
+                  z-index: -1000;
+
+
+                  .icon--2{
+                    position: absolute;
+                    width: 10%;
+                    border-radius: 100%;
+                    background-color: $light-color;
+                    padding: 1rem;
+                    z-index: 2;
+                    top: 10%;
+                    left: 80%;
+                }
+                }
+  
+                &__circle--3{
+                  @include circle;
+                  width: 65%;
+                  height: 90%;
+                  top: 6%;
+                  left: 20%;
+                  z-index: -1;
+
+
+                    .icon--3{
+                    position: absolute;
+                    width: 10%;
+                    border-radius: 100%;
+                    background-color: $light-color;
+                    padding: 1rem;
+                    z-index: 3;
+                    top: 20%;
+                     }
+
+                      .icon--4{
+                    position: absolute;
+                    width: 9%;
+                    border-radius: 100%;
+                    background-color: $light-color;
+                    padding: 1rem;
+                    z-index: 4;
+                    left: 70%;
+                      }
+                }
+
+            img{
+                width: 100%;
+                z-index: 4;
+            }
+
+            
+        }
+}

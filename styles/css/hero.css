@@ -1,0 +1,259 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Square+Peg&display=swap");
+@use "sass:map";
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+:root {
+  --primary-color: $primary-color;
+  --secondary-color: $secondary-color;
+  --third-color: $third-color;
+  --accent-color: $accent-color;
+  --light-color: $light-color;
+  --dark-color: $dark-color;
+  --font-primary-color: map-get($font-color, "primary" );
+  --font-secondary-color: map-get($font-color, "secondary" );
+  --font-other-color: map-get($font-color, "other");
+  --font-s: map-get($font-size, "s");
+  --font-m: map-get($font-size, "m");
+  --font-ml: map-get($font-size, "ml");
+  --font-l: map-get($font-size, "l");
+  --font-xl: map-get($font-size, "xl");
+  --font-2xl: map-get($font-size, "2xl");
+  --font-3xl: map-get($font-size, "3xl");
+  --font-weight-regular: map-get($font-weight, "regular");
+  --font-weight-medium: map-get($font-weight, "medium");
+  --font-weight-bold: map-get($font-weight, "bold");
+  --border-radius-s: map-get($border-radius, "s");
+  --border-radius-m: map-get($border-radius, "m");
+  --border-radius-l: map-get($border-radius, "l");
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "ًRoboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.5rem;
+  background: linear-gradient(141deg, white 0%, #fdf0f0 51%, #f2f2f2 75%);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 1rem;
+}
+
+.btn__primary {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.btn__primary:hover {
+  background: transparent;
+  color: var(--dark-color);
+  box-shadow: inset 0 0 0 0.2rem var(--primary-color);
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: #d8e8ff;
+  background: linear-gradient(0deg, #d8e8ff 0%, #f9fbff 100%);
+  z-index: -5;
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50vw;
+  gap: 2rem;
+}
+
+.hero__text--large {
+  text-align: center;
+  width: 60%;
+  font-size: 3rem;
+  color: #102851;
+}
+
+.hero__text--small {
+  text-align: center;
+  width: 60%;
+  font-size: 1.4rem;
+  color: #bac4d2;
+}
+
+.hero__text__testimonial {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 55%;
+  gap: 1rem;
+}
+
+.hero__text__testimonial .doctor-profiles {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.4rem;
+  background-color: #102851;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.hero__text__testimonial .doctor-profiles__image {
+  width: 20%;
+}
+
+.hero__text__testimonial .doctor-profiles__image img {
+  width: 80%;
+}
+
+.hero__text__testimonial .doctor-profiles__text {
+  width: 80%;
+  color: #f7f7f7;
+}
+
+.hero__text__testimonial .patient-ratings {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.4rem;
+  background-color: #102851;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.hero__text__testimonial .patient-ratings__image {
+  width: 20%;
+}
+
+.hero__text__testimonial .patient-ratings__image img {
+  width: 80%;
+}
+
+.hero__text__testimonial .patient-ratings__text {
+  width: 80%;
+  color: #f7f7f7;
+}
+
+.hero__image {
+  width: 60vw;
+  position: relative;
+  left: -8%;
+  z-index: 5;
+}
+
+.hero__image__circle--1 {
+  border-radius: 100%;
+  border: 2px solid #cac9d1;
+  position: absolute;
+  width: 45%;
+  height: 65%;
+  top: 20%;
+  left: 30%;
+  z-index: -1;
+}
+
+.hero__image__circle--1 .icon--1 {
+  position: absolute;
+  width: 10%;
+  border-radius: 100%;
+  background-color: #f7f7f7;
+  padding: 1rem;
+  z-index: 1;
+  top: 16%;
+  left: 2%;
+}
+
+.hero__image__circle--2 {
+  border-radius: 100%;
+  border: 2px solid #cac9d1;
+  position: absolute;
+  width: 55%;
+  height: 80%;
+  top: 12%;
+  left: 25%;
+  z-index: -1000;
+}
+
+.hero__image__circle--2 .icon--2 {
+  position: absolute;
+  width: 10%;
+  border-radius: 100%;
+  background-color: #f7f7f7;
+  padding: 1rem;
+  z-index: 2;
+  top: 10%;
+  left: 80%;
+}
+
+.hero__image__circle--3 {
+  border-radius: 100%;
+  border: 2px solid #cac9d1;
+  position: absolute;
+  width: 65%;
+  height: 90%;
+  top: 6%;
+  left: 20%;
+  z-index: -1;
+}
+
+.hero__image__circle--3 .icon--3 {
+  position: absolute;
+  width: 10%;
+  border-radius: 100%;
+  background-color: #f7f7f7;
+  padding: 1rem;
+  z-index: 3;
+  top: 20%;
+}
+
+.hero__image__circle--3 .icon--4 {
+  position: absolute;
+  width: 9%;
+  border-radius: 100%;
+  background-color: #f7f7f7;
+  padding: 1rem;
+  z-index: 4;
+  left: 70%;
+}
+
+.hero__image img {
+  width: 100%;
+  z-index: 4;
+}
+/*# sourceMappingURL=hero.css.map */

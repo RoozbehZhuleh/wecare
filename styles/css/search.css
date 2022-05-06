@@ -1,0 +1,214 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Square+Peg&display=swap");
+@use "sass:map";
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+:root {
+  --primary-color: $primary-color;
+  --secondary-color: $secondary-color;
+  --third-color: $third-color;
+  --accent-color: $accent-color;
+  --light-color: $light-color;
+  --dark-color: $dark-color;
+  --font-primary-color: map-get($font-color, "primary" );
+  --font-secondary-color: map-get($font-color, "secondary" );
+  --font-other-color: map-get($font-color, "other");
+  --font-s: map-get($font-size, "s");
+  --font-m: map-get($font-size, "m");
+  --font-ml: map-get($font-size, "ml");
+  --font-l: map-get($font-size, "l");
+  --font-xl: map-get($font-size, "xl");
+  --font-2xl: map-get($font-size, "2xl");
+  --font-3xl: map-get($font-size, "3xl");
+  --font-weight-regular: map-get($font-weight, "regular");
+  --font-weight-medium: map-get($font-weight, "medium");
+  --font-weight-bold: map-get($font-weight, "bold");
+  --border-radius-s: map-get($border-radius, "s");
+  --border-radius-m: map-get($border-radius, "m");
+  --border-radius-l: map-get($border-radius, "l");
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "ًRoboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.5rem;
+  background: linear-gradient(141deg, white 0%, #fdf0f0 51%, #f2f2f2 75%);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 1rem;
+}
+
+.btn__primary {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.btn__primary:hover {
+  background: transparent;
+  color: var(--dark-color);
+  box-shadow: inset 0 0 0 0.2rem var(--primary-color);
+}
+
+.search {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  width: 70%;
+  top: 63%;
+  left: 20%;
+  background-color: #f7f7f7;
+  padding: 2rem 0;
+}
+
+.search__bars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  gap: 1rem;
+}
+
+.search__bars--doctor {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 45%;
+  border: 1px solid black;
+  padding: 0.5rem;
+  background-color: #fceaea;
+  border-radius: 0.5rem;
+}
+
+.search__bars--doctor input {
+  width: 85%;
+  padding: 0.8rem 8rem;
+  border: none;
+  background-color: #fceaea;
+}
+
+.search__bars--location {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 45%;
+  border: 1px solid black;
+  padding: 0.5rem;
+  background-color: #fceaea;
+  border-radius: 0.5rem;
+}
+
+.search__bars--location input {
+  width: 85%;
+  padding: 1rem 8rem;
+  border: none;
+  background-color: #fceaea;
+}
+
+.search__bars--btn {
+  font-family: inherit;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  outline: 0;
+  border: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  width: 10%;
+  border: 1px solid #102851;
+}
+
+.search__bars--btn:hover {
+  background-color: #102851;
+}
+
+.search__bars--btn img {
+  width: 60%;
+}
+
+.search__looking {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.search__looking h3 {
+  color: #181131;
+  margin: 1rem 0;
+}
+
+.search__looking__tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search__looking__tags button {
+  font-family: inherit;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  outline: 0;
+  border: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  background-color: #e8f1ff;
+  text-decoration: none;
+  color: #102851;
+}
+
+.search__looking__tags .tag__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: #fceaea;
+}
+
+.search__looking__tags .tag__wrapper p {
+  font-size: 1.4rem;
+  color: #102851;
+}
+
+.search__looking__tags .tag__wrapper img {
+  width: 1.8rem;
+}
+/*# sourceMappingURL=search.css.map */

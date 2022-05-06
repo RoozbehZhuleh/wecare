@@ -9,43 +9,47 @@
     <script src="./scripts/darkmode.js" defer></script>
 </head>
 <body>    
-<nav id="nav">
+<header id="header">
+<nav id="nav"> 
     <div class="container">
-        <figure class="nav__logo">
-            <img src="" alt="logo">
-            <figcaption class="logo__caption">We.care</figcaption>
-        </figure>
-        <div class="nav__links__wrapper">
-            <ul class="links">
-                <li class="link__item"><a href="">Find a Doctor</a></li>
-                <li class="link__item"><a href="">Find a Hospital</a></li>
-                <li class="link__item"><a href="">Health A to Z</a></li>
-            </ul>
-        </div>
-        <div class="nav__buttons__wrapper">
-            <button class="button--primary">Log in</button>
-            <button class="button--secondary">Sign in</button>
+        <div class="nav">
+            <figure class="nav__logo">
+                <img src="./resources/images/WeCare-Logo.png" alt="logo">
+                <!-- <figcaption class="logo__caption">We.care</figcaption> -->
+            </figure>
+            <div class="nav__links__wrapper">
+                <ul class="links">
+                    <li class="links__item"><a href="">Find a Doctor</a></li>
+                    <li class="links__item"><a href="">Find a Hospital</a></li>
+                    <li class="links__item"><a href="">Health A to Z</a></li>
+                </ul>
+            </div>
+            <div class="nav__buttons__wrapper">
+                <button class="btn--login">Log in</button>
+                <button class="btn--signup">Sign up</button>
+            </div>
         </div>
     </div>
-</nav>
+</nav> 
+</header>
 
 
 <main id="main">
-    
-    <section class="hero">
-        <div class="container">
-            <!-- spinning background for hero -->
+    <!-- hero -->
+<section id="hero">
+    <div class="container">
+        <div class="hero">
             <div class="hero__text">
                 <div class="hero__text--large">
                     <h1>Feel better about finding healthcare</h1>
                 </div>
                 <div class="hero__text--small">
-                    <p> At Healthgrades, we take the guesswork out of finding the right doctors and hospitals, and care for you and your family</p>
+                    <p> At Healthgrades, we take the guesswork out of finding the right doctors and hospitals, and care for you and your family.</p>
                 </div>
                 <div class="hero__text__testimonial">
                     <div class="doctor-profiles">
                         <div class="doctor-profiles__image">
-                            <img src="" alt="people icon">
+                            <img src="./resources/icons/icons8-star-50.png" alt="people icon">
                         </div>
                         <div class="doctor-profiles__text">
                             <p>Profiles for Every Doctor in America</p>
@@ -54,7 +58,7 @@
 
                     <div class="patient-ratings">
                         <div class="patient-ratings__image">
-                            <img src="" alt="thumbs up">
+                            <img src="./resources/icons/icons8-thumbs-up-50.png" alt="thumbs up">
                         </div>
                         <div class="patient-ratings__text">
                             <p>More Than 10 Million Patient Ratings</p>
@@ -63,15 +67,134 @@
                 </div>
             </div>
             <div class="hero__image">
-                <img src="" alt="doctor">
+                <img src="./resources/people/og/0-removebg-preview.png" alt="doctor">
+                <div class="hero__image__circle--1">
+                    <img class="icon--1 hero__icon" src="./resources/icons/icons8-stethoscope-50.png" alt="icon">
+                </div>
+                <div class="hero__image__circle--2">
+                    <img class="icon--2 hero__icon" src="./resources/icons/icons8-pill-50.png" alt="icon">
+                    
+                </div>
+                <div class="hero__image__circle--3">
+                    <img class="icon--3 hero__icon" src="./resources/icons/icons8-medical-50-4.png" alt="icon">
+                    <img class="icon--4 hero__icon" src="./resources/icons/icons8-rod-of-asclepius-50.png" alt="icon">
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="search">
+<section id="search">
+    <div class="container">
+        <div class="search">
+            <div class="search__bars">
+                <div class="search__bars--doctor">
+                    <img src="./resources/icons/icons8-magnifier-50.png" class="search__bars__logo"></img>
+                    <input type="text" placeholder="Search Doctors, Conditions or Procedures">
+                </div>
+                <div class="search__bars--location">
+                    <img src="./resources/icons/icons8-location-50.png" class="search__bars__logo"></img>
+                    <input type="text" placeholder="Set Your Location">
+                </div>
+                <button class="search__bars--btn"><img src="./resources/icons/icons8-magnifier-50.png" alt=""></button>
+            </div>
+
+            <div class="search__looking">
+                <h3>You may be looking for</h3>
+
+                <div class="search__looking__tags">
+                    <div class="tag__wrapper tag__wrapper--1">
+                        <p>Family Medicine</p>
+                        <img src="./resources/icons/icons8-x-50.png" alt="x">
+                    </div>
+
+                    <div class="tag__wrapper tag__wrapper--2">
+                        <p>Pediatrics</p>
+                        <img src="./resources/icons/icons8-x-50.png" alt="x">
+                    </div>
+
+                    <div class="tag__wrapper tag__wrapper--3">
+                        <p>Top Hospital</p>
+                        <img src="./resources/icons/icons8-x-50.png" alt="x">
+                    </div>
+
+                    <div class="tag__wrapper tag__wrapper--4">
+                        <p>Telehealth</p>
+                        <img src="./resources/icons/icons8-x-50.png" alt="x">
+                    </div>
+
+                    <div class="tag__wrapper tag__wrapper--5">
+                        <p>COVID-19</p>
+                        <img src="./resources/icons/icons8-x-50.png" alt="x">
+                    </div>
+
+                    <div class="tag__wrapper tag__wrapper--6">
+                        <p>Orthopedic Surgery</p>
+                        <img src="./resources/icons/icons8-x-50.png" alt="x">
+                    </div>
+
+                    <button>
+                        <a href="#">More</a>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
 
 
-    </section>
+<!-- popular searches -->
+
+<section id="popular-search">
+    <div class="container">
+        <div class="popular-search">
+            <h2>Popular Searches on Wecare</h2>
+            <div class="popular-search__wrapper">
+                <div class="popular-search__titles">
+                    <p>Specialties</p>
+                    <p>Conditions</p>
+                    <p>Procedures</p>
+                </div>
+                <div class="popular-search__line">
+
+                </div>
+                <div class="popular__items__wrapper">
+                    <div class="popular__items--1 dermatology popular__item">
+                        <img src="./resources/icons/icons8-dermatology-50.png" alt="dermatology">
+                        <p>Dermatology</p>
+                    </div>
+                    <div class="popular__items--2 internal popular__item">
+                        <img src="./resources/icons/icons8-lungs-50.png" alt="internal medicine">
+                        <p>Internal Medicine</p>
+                    </div>
+                    <div class="popular__items--3 neurology popular__item">
+                        <img src="./resources/icons/icons8-neurology-science-50.png" alt="neurology">
+                        <p>Neurology</p>
+                    </div>
+                    <div class="popular__items--4 general popular__item">
+                        <img src="./resources/icons/icons8-health-50-2.png" alt="general medicine">
+                        <p>General Medicine</p>
+                    </div>
+                    <div class="popular__items--5 dentistry popular__item">
+                        <img src="./resources/icons/icons8-tooth-50.png" alt="dentistry">
+                        <p>Dentistry</p>
+                    </div>
+                    <div class="popular__items--6 otolary popular__item">
+                        <img src="./resources/icons/icons8-nose-50.png" alt="otolaryngology">
+                        <p>Otolaryngology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="find-doctor">
+
+</section>
+
 
 </main>
 
