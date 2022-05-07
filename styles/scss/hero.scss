@@ -33,7 +33,7 @@
 
             &__testimonial{
                 @include flex(row, space-around, center);
-                width: 65%;
+                width: 75%;
                 gap: 1rem;
             
                 .doctor-profiles{
