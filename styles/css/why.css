@@ -103,8 +103,14 @@ a {
 .why--left {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  position: relative;
+  left: -10vw;
+}
+
+.why--left img {
+  width: 70rem;
 }
 
 .why--left .floating-card--2 {
@@ -171,6 +177,8 @@ a {
   gap: 1vh;
   position: relative;
   top: 12vh;
+  left: -10vw;
+  width: 60%;
 }
 
 .why--right h2 {
