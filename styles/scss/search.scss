@@ -67,6 +67,7 @@
 
     &__looking{
         @include flex(column, space-around, flex-start);
+        width: 90%;
 
         h3{
             color: $dark-color;

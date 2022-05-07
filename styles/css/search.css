@@ -175,6 +175,7 @@ a {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+  width: 90%;
 }
 
 .search__looking h3 {
