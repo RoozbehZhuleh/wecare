@@ -2,7 +2,7 @@
 
 .find__wrapper{
     @include flex(row,flex-end,center);
-    gap: 2vw;
+    gap: 1vw;
     width: 99%;
 
     .find--left{
@@ -12,10 +12,13 @@
 
         h2{
             color: map-get($font-color, "primary");
+            font-size: map-get($font-size, "xl");
+            margin: 0 0 1vh 0;
         }
 
         p{ 
             color: map-get($font-color, "other" );
+            margin: 0 0 4vh 0;
         }
 
         .find--left__box{
@@ -27,8 +30,11 @@
         .find__item{
             @include flex(row, flex-start, center);
             gap: 2vw;
+            background-color: $third-color;
+            border-radius: map-get($border-radius , "m" );
+
             div{
-                @include flex(column, flex-start, flex-start);
+                @include flex(column, center, flex-start);
                 gap: 1vh;
             }
         }
@@ -63,11 +69,12 @@
         padding: 3rem 0.5rem;
         width: 12vw;
         border-radius: map-get($border-radius, "m");
-        border: 1px solid $accent-color;
+        border: 0.5px solid $accent-color;
         position: absolute;
         left: 45vw;
         background-color: $light-color;
         z-index: 10;
+        box-shadow: 0.1rem 0.1rem 1rem $accent-color;
 
         h3{
             color: map-get($font-color, "primary" );

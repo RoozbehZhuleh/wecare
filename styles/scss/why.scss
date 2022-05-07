@@ -29,7 +29,8 @@
             background-color: $light-color;
             border-radius: map-get($border-radius, "m" );
             padding: 1vh;
-            border: 1px solid $accent-color;
+            border: 0.5px solid $accent-color;
+            box-shadow: 0.1rem 0.1rem 1rem $accent-color;
 
             .doctor--card{
                 @include flex(row, flex-start, center);
