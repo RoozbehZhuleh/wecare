@@ -31,7 +31,7 @@
             transition: all 0.2s linear;
 
             &:hover{
-                background-color: $accent-color;
+                background-color: $secondary-color;
             }
 
 
@@ -65,8 +65,10 @@
             transition: all 0.2s linear;
 
             &:hover{
-                background-color: $accent-color;
+                background-color: $secondary-color;
+                
             }
+
 
             img{
                 width: 20vw;

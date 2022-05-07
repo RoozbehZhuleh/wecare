@@ -97,7 +97,7 @@ a {
 }
 
 .specialists p {
-  color: #bac4d2;
+  color: #9aa1aa;
 }
 
 .specialists--1 {
@@ -122,7 +122,7 @@ a {
 }
 
 .specialists--1 .specialists--item:hover {
-  background-color: #102851;
+  background-color: #014ed5;
 }
 
 .specialists--1 .specialists--item img {
@@ -134,7 +134,7 @@ a {
 }
 
 .specialists--1 .specialists--item p {
-  color: #bac4d2;
+  color: #9aa1aa;
 }
 
 .specialists--2 {
@@ -159,7 +159,7 @@ a {
 }
 
 .specialists--2 .specialists--item:hover {
-  background-color: #102851;
+  background-color: #014ed5;
 }
 
 .specialists--2 .specialists--item img {

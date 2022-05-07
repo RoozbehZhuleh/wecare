@@ -65,8 +65,9 @@
         border-radius: map-get($border-radius, "m");
         border: 1px solid $accent-color;
         position: absolute;
-        left: 50vw;
+        left: 45vw;
         background-color: $light-color;
+        z-index: 10;
 
         h3{
             color: map-get($font-color, "primary" );
@@ -98,8 +99,9 @@
             img{
                 width:2vw;
             }
-
+            
             input{
+                padding: 0.5vw;
                 width: 90%;
                 border: none;
             }

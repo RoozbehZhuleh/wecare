@@ -102,7 +102,7 @@ a {
 }
 
 .find__wrapper .find--left p {
-  color: #bac4d2;
+  color: #9aa1aa;
 }
 
 .find__wrapper .find--left .find--left__box {
@@ -164,8 +164,9 @@ a {
   border-radius: 1rem;
   border: 1px solid #102851;
   position: absolute;
-  left: 50vw;
+  left: 45vw;
   background-color: #f7f7f7;
+  z-index: 10;
 }
 
 .find__wrapper .floating-card h3 {
@@ -212,6 +213,7 @@ a {
 }
 
 .find__wrapper .floating-card__input input {
+  padding: 0.5vw;
   width: 90%;
   border: none;
 }
