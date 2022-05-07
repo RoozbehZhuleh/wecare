@@ -2,15 +2,14 @@
 
 
 .hero{
-    @include flex(row,center,center);
+    @include flex(row,flex-end,center);
     gap: 2vw;
-    // position: absolute;
     background-color: transparent;
    
     z-index: -5;
 
         &__text{
-            @include flex(column,flex-start,center);
+            @include flex(column,center,center);
             width: 50vw;
             gap: 1vh;
 
@@ -41,7 +40,7 @@
                     width: 50%;
                     @include flex(row,flex-start, center);
                     font-size: map-get($font-size , "m" );
-                    background-color: $accent-color;
+                    background-color: $secondary-color;
                     padding: 1rem;
                     border-radius: map-get($border-radius, "s" );
 
@@ -63,7 +62,7 @@
                     width: 50%;
                     @include flex(row, flex-start, center);
                     font-size: map-get($font-size , "m" );
-                    background-color: $accent-color;
+                    background-color: $secondary-color;
                     padding: 1rem;
                     border-radius: map-get($border-radius, "s" );
                     
@@ -100,7 +99,7 @@
             &__circle--1{
                 @include circle;
                   width: 45%;
-                  height: 65%;
+                  height: 68%;
                   top: 20%;
                   left: 30%;
                   z-index: -1;
@@ -113,7 +112,7 @@
                     padding: 1rem;
                     z-index: 1;
                     top: 16%;
-                    left: 2%;
+                    left: 3%;
                 }
 
               }
@@ -121,7 +120,7 @@
               &__circle--2{
                   @include circle;
                   width: 55%;
-                  height: 80%;
+                  height: 85%;
                   top: 12%;
                   left:25%;
                   z-index: -1000;
@@ -142,7 +141,7 @@
                 &__circle--3{
                   @include circle;
                   width: 65%;
-                  height: 90%;
+                  height: 95%;
                   top: 6%;
                   left: 20%;
                   z-index: -1;
@@ -155,7 +154,7 @@
                     background-color: $light-color;
                     padding: 1rem;
                     z-index: 3;
-                    top: 20%;
+                    top: 14%;
                      }
 
                       .icon--4{

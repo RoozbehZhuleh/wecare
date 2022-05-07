@@ -89,6 +89,15 @@ a {
   width: 100%;
 }
 
+.feedback h3 {
+  font-size: 4rem;
+  color: #102851;
+}
+
+.feedback p {
+  color: #9aa1aa;
+}
+
 .feedback__wrapper {
   display: flex;
   flex-direction: row;
@@ -152,7 +161,7 @@ a {
 }
 
 .feedback .feedback--right .patient-profile .patient-text .patient-location {
-  color: #bac4d2;
+  color: #9aa1aa;
 }
 
 .feedback .feedback--right .patient-profile .patient-text .patient-stars {
@@ -164,7 +173,7 @@ a {
 }
 
 .feedback .feedback--right .patient-comment {
-  color: #bac4d2;
+  color: #9aa1aa;
   width: 90%;
 }
 

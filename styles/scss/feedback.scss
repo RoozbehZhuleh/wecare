@@ -6,6 +6,16 @@
     gap: 3vh;
     width: 100%;
 
+
+    h3{
+        font-size: map-get($font-size, "2xl" );
+        color: $accent-color;
+    }
+
+    p{
+        color: map-get($font-color, "other");
+    }
+
     &__wrapper{
         @include flex(row, center, center);
     }
