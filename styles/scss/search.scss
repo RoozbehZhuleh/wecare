@@ -4,9 +4,9 @@
     position: relative;
     @include flex(column, space-around, center);
     gap: 2rem;
-    width: 70%;
+    width: 80%;
     top: -10vh;
-    left: 20%;
+    left: 10%;
     background-color: $light-color;
     padding: 2rem 0;
     z-index: 10;
