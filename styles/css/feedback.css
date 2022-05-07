@@ -79,6 +79,14 @@ a {
   box-shadow: inset 0 0 0 0.2rem var(--primary-color);
 }
 
+@keyframes icon1 {
+  0% {
+  }
+  10% {
+    transform: translateX(-50%) translate;
+  }
+}
+
 .feedback {
   display: flex;
   flex-direction: column;
@@ -129,10 +137,11 @@ a {
   align-items: center;
   gap: 4vw;
   width: 80%;
-  border: 1px solid #102851;
+  border: 0.5px solid #102851;
   border-radius: 1.5rem;
   padding: 2vw 0;
   background-color: #e8f1ff;
+  box-shadow: 0.1rem 0.1rem 1rem #102851;
 }
 
 .feedback .feedback--right .patient-profile .patient-img {
