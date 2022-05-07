@@ -182,7 +182,8 @@ a {
 .hero__image {
   width: 80vw;
   position: relative;
-  left: 4vw;
+  left: 5vw;
+  top: 2vh;
   z-index: 5;
 }
 
@@ -262,7 +263,7 @@ a {
 }
 
 .hero__image img {
-  width: 55vw;
+  width: 58vw;
   z-index: 4;
   position: relative;
   left: 2vw;
