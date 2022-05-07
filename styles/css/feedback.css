@@ -79,138 +79,105 @@ a {
   box-shadow: inset 0 0 0 0.2rem var(--primary-color);
 }
 
-.search {
-  position: relative;
+.feedback {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
-  width: 70%;
-  top: -10vh;
-  left: 20%;
-  background-color: #f7f7f7;
-  padding: 2rem 0;
-  z-index: 10;
+  margin: 10vh 0 0 0;
+  gap: 3vh;
+  width: 100%;
 }
 
-.search__bars {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 95%;
-  gap: 1rem;
-}
-
-.search__bars--doctor {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 45%;
-  border: 1px solid black;
-  padding: 0.5rem;
-  background-color: #fceaea;
-  border-radius: 0.5rem;
-}
-
-.search__bars--doctor input {
-  width: 85%;
-  padding: 0.8rem 8rem;
-  border: none;
-  background-color: #fceaea;
-}
-
-.search__bars--location {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 45%;
-  border: 1px solid black;
-  padding: 0.5rem;
-  background-color: #fceaea;
-  border-radius: 0.5rem;
-}
-
-.search__bars--location input {
-  width: 85%;
-  padding: 1rem 8rem;
-  border: none;
-  background-color: #fceaea;
-}
-
-.search__bars--btn {
-  font-family: inherit;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  outline: 0;
-  border: none;
-  box-shadow: none;
-  transition: all 0.3s ease;
-  width: 10%;
-  border: 1px solid #102851;
-}
-
-.search__bars--btn:hover {
-  background-color: #102851;
-}
-
-.search__bars--btn img {
-  width: 60%;
-}
-
-.search__looking {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-
-.search__looking h3 {
-  color: #181131;
-  margin: 1rem 0;
-}
-
-.search__looking__tags {
+.feedback__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
 }
 
-.search__looking__tags button {
-  font-family: inherit;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  outline: 0;
-  border: none;
-  box-shadow: none;
-  transition: all 0.3s ease;
-  background-color: #e8f1ff;
-  text-decoration: none;
-  color: #102851;
+.feedback .feedback--left {
+  width: 50%;
 }
 
-.search__looking__tags .tag__wrapper {
+.feedback .feedback--left img {
+  width: 90%;
+}
+
+.feedback .feedback--right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8vh;
+}
+
+.feedback .feedback--right .patient-profile {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 1rem;
-  background-color: #fceaea;
+  gap: 4vw;
+  width: 80%;
+  border: 1px solid #102851;
+  border-radius: 1.5rem;
+  padding: 2vw 0;
+  background-color: #e8f1ff;
 }
 
-.search__looking__tags .tag__wrapper p {
-  font-size: 1.4rem;
+.feedback .feedback--right .patient-profile .patient-img {
+  border-radius: 1.5rem;
+  width: 30%;
+}
+
+.feedback .feedback--right .patient-profile .patient-img img {
+  position: relative;
+  left: -3vw;
+  width: 20vw;
+}
+
+.feedback .feedback--right .patient-profile .patient-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1vh;
+  width: 70%;
+}
+
+.feedback .feedback--right .patient-profile .patient-text .patient-name {
+  font-size: 2rem;
   color: #102851;
 }
 
-.search__looking__tags .tag__wrapper img {
-  width: 1.8rem;
+.feedback .feedback--right .patient-profile .patient-text .patient-location {
+  color: #bac4d2;
 }
-/*# sourceMappingURL=search.css.map */
+
+.feedback .feedback--right .patient-profile .patient-text .patient-stars {
+  width: 100%;
+}
+
+.feedback .feedback--right .patient-profile .patient-text .patient-stars .star {
+  width: 10%;
+}
+
+.feedback .feedback--right .patient-comment {
+  color: #bac4d2;
+  width: 90%;
+}
+
+.feedback .feedback--right .slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  cursor: pointer;
+}
+
+.feedback .feedback--right .slider i {
+  color: #102851;
+}
+/*# sourceMappingURL=feedback.css.map */

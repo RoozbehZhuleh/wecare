@@ -1,0 +1,92 @@
+@import "./layout.scss";
+
+.specialists{
+    @include flex(column, space-around, center);
+    margin: 5vh 0 0 0;
+    gap: 5vh;
+
+    h3{
+        color: map-get($font-color, "primary" );
+    }
+    .sp--title{
+        font-size: map-get($font-size, "2xl" );
+
+    }
+
+    p{
+        color: map-get($font-color, "other");
+    }
+
+    &--1{
+        @include flex(row, space-around, center);
+        width: 95%;
+
+        .specialists--item{
+            @include flex(column, center, center);
+            width: 20%;
+            background-color: $third-color;
+            padding: 2vh 0;
+            border-radius: map-get($border-radius, "l" );
+            cursor: pointer;
+            transition: all 0.2s linear;
+
+            &:hover{
+                background-color: $accent-color;
+            }
+
+
+            img{
+                width: 20vw;
+            }
+
+            h3{
+                color: map-get($font-color, "primary");
+            }
+            p{
+                color: map-get($font-color, "other");
+            }
+
+
+            
+        }
+    }
+
+    &--2{
+        @include flex(row, space-around, center);
+        width: 95%;
+
+        .specialists--item{
+            @include flex(column, center, center);
+            width: 20%;
+            background-color: $third-color;
+            padding: 2vh 0;
+            border-radius: map-get($border-radius, "l" );
+            cursor: pointer;
+            transition: all 0.2s linear;
+
+            &:hover{
+                background-color: $accent-color;
+            }
+
+            img{
+                width: 20vw;
+            }
+    }
+}
+
+.sp--text{
+    @include flex(column, center, center);
+}
+
+.slider{
+    @include flex(row, center, center);
+    gap: 1vw;
+    cursor: pointer;
+
+    i{
+        color: $accent-color;
+    }
+}
+    
+}
+

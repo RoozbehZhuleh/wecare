@@ -79,69 +79,100 @@ a {
   box-shadow: inset 0 0 0 0.2rem var(--primary-color);
 }
 
-.search {
-  position: relative;
+.find__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2vw;
+  width: 99%;
+}
+
+.find__wrapper .find--left {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
-  width: 70%;
-  top: -10vh;
-  left: 20%;
+  gap: 2vh;
+  width: 30%;
+}
+
+.find__wrapper .find--left h2 {
+  color: #102851;
+}
+
+.find__wrapper .find--left p {
+  color: #bac4d2;
+}
+
+.find__wrapper .find--left .find--left__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3vh;
+}
+
+.find__wrapper .find--left .find__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2vw;
+}
+
+.find__wrapper .find--left .find__item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1vh;
+}
+
+.find__wrapper .find--right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+.find__wrapper .find--blob {
+  position: relative;
+  width: 80rem;
+  opacity: 0.5;
+  z-index: -1;
+  top: 5vh;
+  left: 4vw;
+}
+
+.find__wrapper .find--doctor {
+  position: absolute;
+  z-index: 1;
+  width: 75rem;
+}
+
+.find__wrapper .floating-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  text-align: center;
+  padding: 3rem 0.5rem;
+  width: 12vw;
+  border-radius: 1rem;
+  border: 1px solid #102851;
+  position: absolute;
+  left: 50vw;
   background-color: #f7f7f7;
-  padding: 2rem 0;
-  z-index: 10;
 }
 
-.search__bars {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 95%;
-  gap: 1rem;
+.find__wrapper .floating-card h3 {
+  color: #102851;
 }
 
-.search__bars--doctor {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 45%;
-  border: 1px solid black;
-  padding: 0.5rem;
-  background-color: #fceaea;
-  border-radius: 0.5rem;
-}
-
-.search__bars--doctor input {
-  width: 85%;
-  padding: 0.8rem 8rem;
-  border: none;
-  background-color: #fceaea;
-}
-
-.search__bars--location {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 45%;
-  border: 1px solid black;
-  padding: 0.5rem;
-  background-color: #fceaea;
-  border-radius: 0.5rem;
-}
-
-.search__bars--location input {
-  width: 85%;
-  padding: 1rem 8rem;
-  border: none;
-  background-color: #fceaea;
-}
-
-.search__bars--btn {
+.find__wrapper .floating-card button {
   font-family: inherit;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
@@ -149,68 +180,39 @@ a {
   border: none;
   box-shadow: none;
   transition: all 0.3s ease;
-  width: 10%;
-  border: 1px solid #102851;
-}
-
-.search__bars--btn:hover {
-  background-color: #102851;
-}
-
-.search__bars--btn img {
-  width: 60%;
-}
-
-.search__looking {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-
-.search__looking h3 {
-  color: #181131;
-  margin: 1rem 0;
-}
-
-.search__looking__tags {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-}
-
-.search__looking__tags button {
-  font-family: inherit;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  outline: 0;
-  border: none;
-  box-shadow: none;
-  transition: all 0.3s ease;
   background-color: #e8f1ff;
-  text-decoration: none;
-  color: #102851;
+  border-radius: 1rem;
+  width: 80%;
 }
 
-.search__looking__tags .tag__wrapper {
+.find__wrapper .floating-card button:hover {
+  background-color: #102851;
+  color: #f7f7f7;
+}
+
+.find__wrapper .floating-card button img {
+  width: 2vw;
+}
+
+.find__wrapper .floating-card__input {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 1rem;
-  background-color: #fceaea;
+  gap: 0.5vw;
+  padding: 0.5vh 1vw;
 }
 
-.search__looking__tags .tag__wrapper p {
-  font-size: 1.4rem;
-  color: #102851;
+.find__wrapper .floating-card__input img {
+  width: 2vw;
 }
 
-.search__looking__tags .tag__wrapper img {
-  width: 1.8rem;
+.find__wrapper .floating-card__input input {
+  width: 90%;
+  border: none;
 }
-/*# sourceMappingURL=search.css.map */
+/*# sourceMappingURL=find-doctor.css.map */

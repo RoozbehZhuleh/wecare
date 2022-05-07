@@ -1,0 +1,109 @@
+@import "./layout.scss";
+
+.find__wrapper{
+    @include flex(row,flex-end,center);
+    gap: 2vw;
+    width: 99%;
+
+    .find--left{
+        @include flex(column, flex-start, center);
+        gap: 2vh;
+        width: 30%;
+
+        h2{
+            color: map-get($font-color, "primary");
+        }
+
+        p{ 
+            color: map-get($font-color, "other" );
+        }
+
+        .find--left__box{
+            @include flex(column, flex-start, flex-start);
+            gap: 3vh;
+        }
+
+        
+        .find__item{
+            @include flex(row, flex-start, center);
+            gap: 2vw;
+            div{
+                @include flex(column, flex-start, flex-start);
+                gap: 1vh;
+            }
+        }
+
+    }
+
+    .find--right{
+        @include flex(column, center,center);
+        width: 60%;
+    }
+
+
+
+    .find--blob{
+        position: relative;
+        width: 80rem;
+        opacity: 0.5;
+        z-index: -1;
+        top: 5vh;
+        left: 4vw;
+    }
+    .find--doctor{
+        position: absolute;
+        z-index: 1;
+        width: 75rem;
+    }
+
+    .floating-card{
+        @include flex(column, center, center);
+        gap: 2vh;
+        text-align: center;
+        padding: 3rem 0.5rem;
+        width: 12vw;
+        border-radius: map-get($border-radius, "m");
+        border: 1px solid $accent-color;
+        position: absolute;
+        left: 50vw;
+        background-color: $light-color;
+
+        h3{
+            color: map-get($font-color, "primary" );
+        }
+
+        button{
+            @include btn;
+            @include flex(row, center, center);
+            background-color: $third-color;
+            border-radius: map-get($border-radius , "m");
+            width: 80%;
+
+            &:hover{
+                background-color: $accent-color;
+                color: map-get($font-color , "secondary" );
+            }
+
+            img{
+                width: 2vw;
+            }
+
+        }
+
+        &__input{
+            @include flex(row, center, center);
+            gap: 0.5vw;
+            padding: 0.5vh 1vw;
+            
+            img{
+                width:2vw;
+            }
+
+            input{
+                width: 90%;
+                border: none;
+            }
+        }
+    }
+
+}

@@ -6,10 +6,10 @@
 
 .popular-search{
     @include flex(column, center, flex-start);
-    position: absolute;
-    top: 100vh;
-    left: 2vw;
-    width:95%;
+    // position: absolute;
+    // top: 100vh;
+    // left: 2vw;
+    width:99%;
 
 
     h2{

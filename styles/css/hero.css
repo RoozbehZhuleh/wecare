@@ -27,6 +27,7 @@
   --font-xl: map-get($font-size, "xl");
   --font-2xl: map-get($font-size, "2xl");
   --font-3xl: map-get($font-size, "3xl");
+  --font-weight-thin: map-get($font-weight, "thin");
   --font-weight-regular: map-get($font-weight, "regular");
   --font-weight-medium: map-get($font-weight, "medium");
   --font-weight-bold: map-get($font-weight, "bold");
@@ -39,6 +40,7 @@ html {
   font-size: 62.5%;
   font-family: "ًRoboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -82,9 +84,8 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  background: #d8e8ff;
-  background: linear-gradient(0deg, #d8e8ff 0%, #f9fbff 100%);
+  gap: 2vw;
+  background-color: transparent;
   z-index: -5;
 }
 
@@ -94,14 +95,16 @@ a {
   justify-content: flex-start;
   align-items: center;
   width: 50vw;
-  gap: 2rem;
+  gap: 1vh;
 }
 
 .hero__text--large {
   text-align: center;
-  width: 60%;
+  width: 99%;
   font-size: 3rem;
+  font-weight: 300;
   color: #102851;
+  line-height: 10vh;
 }
 
 .hero__text--small {
@@ -109,6 +112,7 @@ a {
   width: 60%;
   font-size: 1.4rem;
   color: #bac4d2;
+  line-height: 3vh;
 }
 
 .hero__text__testimonial {
@@ -116,7 +120,7 @@ a {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 55%;
+  width: 65%;
   gap: 1rem;
 }
 
@@ -171,9 +175,9 @@ a {
 }
 
 .hero__image {
-  width: 60vw;
+  width: 80vw;
   position: relative;
-  left: -8%;
+  left: 4vw;
   z-index: 5;
 }
 
@@ -253,7 +257,9 @@ a {
 }
 
 .hero__image img {
-  width: 100%;
+  width: 55vw;
   z-index: 4;
+  position: relative;
+  left: 2vw;
 }
 /*# sourceMappingURL=hero.css.map */

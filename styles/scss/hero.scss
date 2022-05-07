@@ -3,34 +3,38 @@
 
 .hero{
     @include flex(row,center,center);
-    position: absolute;
-    background: rgb(216,232,255);
-    background: linear-gradient(0deg, rgba(216,232,255,1) 0%, rgba(249,251,255,1) 100%);
+    gap: 2vw;
+    // position: absolute;
+    background-color: transparent;
+   
     z-index: -5;
 
         &__text{
             @include flex(column,flex-start,center);
             width: 50vw;
-            gap: 2rem;
+            gap: 1vh;
 
             &--large{
                 text-align: center;
-                width: 60%;
+                width: 99%;
                 font-size: map-get($font-size , "xl" );
+                font-weight: map-get($font-weight , "thin");
                 color: map-get($font-color , "primary");
+                line-height: 10vh;
             }
 
             &--small{
                 text-align: center;
                 width: 60%;
                 font-size: map-get($font-size , "m");
-                color: map-get($font-color , "other")
+                color: map-get($font-color , "other");
+                line-height: 3vh;
             }
 
 
             &__testimonial{
                 @include flex(row, space-around, center);
-                width: 55%;
+                width: 65%;
                 gap: 1rem;
             
                 .doctor-profiles{
@@ -88,9 +92,9 @@
 
 
         &__image{
-            width: 60vw;
+            width: 80vw;
             position: relative;
-            left: -8%;
+            left: 4vw;
             z-index: 5;
 
             &__circle--1{
@@ -166,8 +170,10 @@
                 }
 
             img{
-                width: 100%;
+                width: 55vw;
                 z-index: 4;
+                position:relative;
+                left: 2vw;
             }
 
             

@@ -27,6 +27,7 @@
   --font-xl: map-get($font-size, "xl");
   --font-2xl: map-get($font-size, "2xl");
   --font-3xl: map-get($font-size, "3xl");
+  --font-weight-thin: map-get($font-weight, "thin");
   --font-weight-regular: map-get($font-weight, "regular");
   --font-weight-medium: map-get($font-weight, "medium");
   --font-weight-bold: map-get($font-weight, "bold");
