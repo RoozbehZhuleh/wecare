@@ -1,0 +1,61 @@
+@import "./layout.scss";
+
+.footer {
+    @include flex(row,space-around,flex-start);
+    gap: 3vw;
+    width: 98%;
+    padding: 3vw 0;
+
+    h4{
+        margin: 0 0 2vh 0;
+        color: $accent-color;
+    }
+
+    a{
+        text-decoration: none;
+        color: map-get($font-color, "other" );
+    }
+
+    &--1{
+        @include flex(column,space-between,flex-start);
+        width: 20%;
+
+        .logo{
+            width: 100%;
+            cursor: pointer;
+
+            img{
+                width: 14vw;
+            }
+        }
+
+        .social{
+            @include flex(row,space-between,center);
+            gap: 1vw;
+            font-size: map-get($font-size, "xl" );
+            color: map-get($font-color, "primary");
+            cursor: pointer;
+            
+            i{
+                border-radius: map-get($border-radius, "s" );
+                transition: all 0.2s linear;
+                padding: 0.5vw;
+                &:hover{
+                    background-color: $accent-color;
+                    color:$light-color;
+                }
+            }
+        }
+    }
+
+    &--2{
+        width: 80%;
+        @include flex(row,space-between,center);
+
+        .footer__links{
+            @include flex(column, center, center);
+            gap: 1vh;
+        }
+    }
+
+}

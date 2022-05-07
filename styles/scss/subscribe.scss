@@ -1,1 +1,47 @@
 @import "./layout.scss";
+
+#subscribe{
+    width: 100%;
+}
+
+.subscribe{
+    @include flex(column, center, center);
+    gap: 3vh;
+    padding: 10vw;
+    width: 100%;
+    background-color: $secondary-color;
+
+    h2 {
+        color: $light-color;
+        font-size: map-get($font-size , "2xl" )
+    }
+    p{
+        color: $light-color;
+    }
+
+    .subscribe-input{
+        @include flex(row, center, center);
+        background-color: $light-color;
+        border-radius: map-get($border-radius , "m" );
+        padding: 0.5vh 1vw;
+        
+        input{
+            padding: 2vh 3vw;
+            border: none;
+            border-radius: map-get($border-radius , "m" );
+            font-size: map-get($font-size , "ml")
+        }
+
+        button {
+            @include btn;
+            background-color: $accent-color;
+            color: map-get($font-color , "secondary" );
+
+            &:hover{
+                background-color: $secondary-color;
+
+            }
+        }
+    }
+
+}
