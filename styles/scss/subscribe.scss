@@ -7,13 +7,16 @@
 .subscribe{
     @include flex(column, center, center);
     gap: 3vh;
-    padding: 10vw;
-    width: 100%;
+    padding: 5vw;
+    width: 70%;
     background-color: $secondary-color;
+    position: relative;
+    left: 17%;
+    border-radius:map-get($border-radius , "l");
 
     h2 {
         color: $light-color;
-        font-size: map-get($font-size , "2xl" )
+        font-size: map-get($font-size , "2xl" );
     }
     p{
         color: $light-color;

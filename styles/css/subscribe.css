@@ -79,6 +79,14 @@ a {
   box-shadow: inset 0 0 0 0.2rem var(--primary-color);
 }
 
+@keyframes icon1 {
+  0% {
+  }
+  10% {
+    transform: translateX(-50%) translate;
+  }
+}
+
 #subscribe {
   width: 100%;
 }
@@ -89,9 +97,12 @@ a {
   justify-content: center;
   align-items: center;
   gap: 3vh;
-  padding: 10vw;
-  width: 100%;
+  padding: 5vw;
+  width: 70%;
   background-color: #014ed5;
+  position: relative;
+  left: 17%;
+  border-radius: 1.5rem;
 }
 
 .subscribe h2 {

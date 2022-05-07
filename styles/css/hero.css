@@ -82,6 +82,9 @@ a {
 @keyframes icon1 {
   0% {
   }
+  10% {
+    transform: translateX(-50%) translate;
+  }
 }
 
 .hero {
