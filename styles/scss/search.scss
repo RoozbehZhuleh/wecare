@@ -10,6 +10,7 @@
     background-color: $light-color;
     padding: 2rem 0;
     z-index: 10;
+    box-shadow: 0.1rem 0.1rem 1rem $secondary-color;
 
     &__bars{
         @include flex(row, space-around, center);

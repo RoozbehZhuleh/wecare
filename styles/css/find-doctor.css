@@ -121,7 +121,7 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 3vh;
+  gap: 2vh;
 }
 
 .find__wrapper .find--left .find__item {
