@@ -9,7 +9,7 @@
 
         &__text{
             @include flex(column,center,center);
-            width: 35vw;
+            width: 40vw;
             gap: 1vh;
 
             &--large{
@@ -192,7 +192,7 @@
                     }
 
             img{
-                width: 90rem;
+                width: 80rem;
                 z-index: 4;
                 position:relative;
                 

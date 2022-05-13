@@ -127,7 +127,7 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 35vw;
+  width: 40vw;
   gap: 1vh;
 }
 
@@ -313,7 +313,7 @@ input {
 }
 
 .hero__image img {
-  width: 90rem;
+  width: 80rem;
   z-index: 4;
   position: relative;
 }
