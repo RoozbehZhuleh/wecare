@@ -16,16 +16,18 @@
 }
 
 .nav{
-    @include flex(row, space-between, center);
-    width: 100%;
+    @include flex(row, center, center);
+    // width: 80%;
     background-color: transparent;
+    position:relative;
+    top: 2vh;
 
     &__logo{
         width: 14%;
         cursor: pointer;
 
         img{
-            width: 100%;
+            width: 90%;
         }
 
     }
@@ -35,10 +37,7 @@
     
         .links{
             @include flex(row, space-around, center);
-            gap: 2rem;
-            position: relative;
-            left: -10%;
-
+            
             .links__item{
                 transition: all .2s linear;
                 cursor: pointer;
@@ -68,6 +67,7 @@
         @include flex(row, flex-end, center);
         gap: 0.5rem;
         width: 30%;
+        z-index: 25;
         
         .btn--login {
             @include btn;

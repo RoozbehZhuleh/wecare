@@ -4,13 +4,14 @@
     position: relative;
     @include flex(column, space-around, center);
     gap: 2rem;
-    width: 80%;
-    top: -10vh;
-    left: 10%;
+    width: 92%;
+    height: 28rem;
+    top: -8vh;
+    left: 5%;
     background-color: $light-color;
     padding: 2rem 0;
     z-index: 10;
-    box-shadow: 0.1rem 0.1rem 1rem $secondary-color;
+    box-shadow: 0.1rem 0.1rem 1rem $dark-color;
     border-radius: map-get($border-radius, "l" );
 
     &__bars{
@@ -21,7 +22,7 @@
         &--doctor{
                 @include flex(row, flex-start, center);
                 width: 45%;
-                border: 1px solid black;
+                border: 1px solid $dark-color;
                 padding: 0.5rem;
                 background-color: $primary-color;
                 border-radius: map-get($border-radius, "s");
@@ -53,11 +54,11 @@
 
         &--btn{
             @include btn;
-            width: 10%;
+            width: 9rem;
             border: 1px solid $accent-color;
 
             &:hover{
-                background-color: $accent-color;
+                background-color: $secondary-color;
             }
 
             img{

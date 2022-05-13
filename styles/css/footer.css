@@ -44,8 +44,11 @@ html {
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 1.5rem;
-  background: linear-gradient(141deg, white 0%, #fdf0f0 51%, #f2f2f2 75%);
+  background: linear-gradient(141deg, white 0%, #fdf4f4 51%, #f2f2f2 75%);
 }
 
 button {
@@ -79,13 +82,44 @@ a {
   box-shadow: inset 0 0 0 0.2rem var(--primary-color);
 }
 
+input {
+  outline: none;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
   gap: 3vw;
-  width: 98%;
+  width: 100%;
   padding: 3vw 0;
 }
 
@@ -113,7 +147,7 @@ a {
 }
 
 .footer--1 .logo img {
-  width: 14vw;
+  width: 12vw;
 }
 
 .footer--1 .social {
@@ -135,11 +169,11 @@ a {
 
 .footer--1 .social i:hover {
   background-color: #102851;
-  color: #f7f7f7;
+  color: #ffffff;
 }
 
 .footer--2 {
-  width: 80%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

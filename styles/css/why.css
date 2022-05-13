@@ -44,8 +44,11 @@ html {
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 1.5rem;
-  background: linear-gradient(141deg, white 0%, #fdf0f0 51%, #f2f2f2 75%);
+  background: linear-gradient(141deg, white 0%, #fdf4f4 51%, #f2f2f2 75%);
 }
 
 button {
@@ -79,11 +82,34 @@ a {
   box-shadow: inset 0 0 0 0.2rem var(--primary-color);
 }
 
-@keyframes icon1 {
+input {
+  outline: none;
+}
+
+@keyframes circle {
   0% {
+    transform: rotate(0);
   }
-  10% {
-    transform: translateX(-50%) translate;
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
@@ -123,7 +149,7 @@ a {
   align-items: flex-start;
   gap: 1vh;
   width: 15vw;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   border-radius: 1rem;
   padding: 1vh;
   border: 0.5px solid #102851;
@@ -222,7 +248,7 @@ a {
 
 .why--right button:hover {
   box-shadow: inset 0 0 0 1px #102851;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   color: #102851;
 }
 /*# sourceMappingURL=why.css.map */

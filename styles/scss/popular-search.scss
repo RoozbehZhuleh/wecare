@@ -6,16 +6,14 @@
 
 .popular-search{
     @include flex(column, center, flex-start);
-    // position: absolute;
-    // top: 100vh;
-    // left: 2vw;
     width:99%;
+    
 
 
     h2{
         position: relative;
         left: 5vw;
-        padding: 3rem;
+        padding: 3rem 0;
         font-size:map-get($font-size, "2xl" );
         font-weight: map-get($font-weight, "medium")
     }
@@ -33,6 +31,16 @@
         @include flex(column, space-between, center);
         gap: 2rem;
         width: 10%;
+        font-weight: map-get($font-weight, "bold");
+        font-size: map-get($font-size, "ml");
+
+        p{
+            transition: all 0.2s linear;
+            &:hover{
+                transform: translatex(5px);
+            }
+        }
+
        
     }
 
@@ -47,18 +55,25 @@
 .popular__items__wrapper{
     @include flex(row, space-between, center);
     width: 80%;
+    gap: 3rem;
+    overflow-x:scroll;
+    padding: 1rem;
 
     .popular__item{
         @include flex(column, center, center);
         padding: 1rem;
         border-radius: map-get($border-radius, "s" );
         width: 15%;
+        height: 100%;
         transition: all 0.2s linear;
+        font-size: map-get($font-size, "ml");
+        box-shadow: 1px 1px 1rem $accent-color;
+
 
         &:hover{
             background-color: $third-color;
-            box-shadow: inset 0 0 0 1px $accent-color;
             cursor: pointer;
+            transform: translateY(-2px);
         }
     }
 }

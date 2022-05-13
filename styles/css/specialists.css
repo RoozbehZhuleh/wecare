@@ -44,8 +44,11 @@ html {
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 1.5rem;
-  background: linear-gradient(141deg, white 0%, #fdf0f0 51%, #f2f2f2 75%);
+  background: linear-gradient(141deg, white 0%, #fdf4f4 51%, #f2f2f2 75%);
 }
 
 button {
@@ -77,6 +80,37 @@ a {
   background: transparent;
   color: var(--dark-color);
   box-shadow: inset 0 0 0 0.2rem var(--primary-color);
+}
+
+input {
+  outline: none;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .specialists {

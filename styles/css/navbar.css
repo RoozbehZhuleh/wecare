@@ -44,8 +44,11 @@ html {
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 1.5rem;
-  background: linear-gradient(141deg, white 0%, #fdf0f0 51%, #f2f2f2 75%);
+  background: linear-gradient(141deg, white 0%, #fdf4f4 51%, #f2f2f2 75%);
 }
 
 button {
@@ -79,11 +82,34 @@ a {
   box-shadow: inset 0 0 0 0.2rem var(--primary-color);
 }
 
-@keyframes icon1 {
+input {
+  outline: none;
+}
+
+@keyframes circle {
   0% {
+    transform: rotate(0);
   }
-  10% {
-    transform: translateX(-50%) translate;
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
@@ -105,10 +131,11 @@ a {
 .nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 100%;
   background-color: transparent;
+  position: relative;
+  top: 2vh;
 }
 
 .nav__logo {
@@ -117,7 +144,7 @@ a {
 }
 
 .nav__logo img {
-  width: 100%;
+  width: 90%;
 }
 
 .nav__links__wrapper {
@@ -129,9 +156,6 @@ a {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  gap: 2rem;
-  position: relative;
-  left: -10%;
 }
 
 .nav__links__wrapper .links .links__item {
@@ -160,6 +184,7 @@ a {
   align-items: center;
   gap: 0.5rem;
   width: 30%;
+  z-index: 25;
 }
 
 .nav__buttons__wrapper .btn--login {

@@ -44,8 +44,11 @@ html {
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 1.5rem;
-  background: linear-gradient(141deg, white 0%, #fdf0f0 51%, #f2f2f2 75%);
+  background: linear-gradient(141deg, white 0%, #fdf4f4 51%, #f2f2f2 75%);
 }
 
 button {
@@ -79,11 +82,34 @@ a {
   box-shadow: inset 0 0 0 0.2rem var(--primary-color);
 }
 
-@keyframes icon1 {
+input {
+  outline: none;
+}
+
+@keyframes circle {
   0% {
+    transform: rotate(0);
   }
-  10% {
-    transform: translateX(-50%) translate;
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
@@ -94,13 +120,14 @@ a {
   justify-content: space-around;
   align-items: center;
   gap: 2rem;
-  width: 80%;
-  top: -10vh;
-  left: 10%;
-  background-color: #f7f7f7;
+  width: 92%;
+  height: 28rem;
+  top: -8vh;
+  left: 5%;
+  background-color: #ffffff;
   padding: 2rem 0;
   z-index: 10;
-  box-shadow: 0.1rem 0.1rem 1rem #014ed5;
+  box-shadow: 0.1rem 0.1rem 1rem #181131;
   border-radius: 1.5rem;
 }
 
@@ -119,9 +146,9 @@ a {
   justify-content: flex-start;
   align-items: center;
   width: 45%;
-  border: 1px solid black;
+  border: 1px solid #181131;
   padding: 0.5rem;
-  background-color: #fceaea;
+  background-color: #fff5f5;
   border-radius: 0.5rem;
 }
 
@@ -129,7 +156,7 @@ a {
   width: 85%;
   padding: 0.8rem 8rem;
   border: none;
-  background-color: #fceaea;
+  background-color: #fff5f5;
 }
 
 .search__bars--location {
@@ -140,7 +167,7 @@ a {
   width: 45%;
   border: 1px solid black;
   padding: 0.5rem;
-  background-color: #fceaea;
+  background-color: #fff5f5;
   border-radius: 0.5rem;
 }
 
@@ -148,7 +175,7 @@ a {
   width: 85%;
   padding: 1rem 8rem;
   border: none;
-  background-color: #fceaea;
+  background-color: #fff5f5;
 }
 
 .search__bars--btn {
@@ -159,12 +186,12 @@ a {
   border: none;
   box-shadow: none;
   transition: all 0.3s ease;
-  width: 10%;
+  width: 9rem;
   border: 1px solid #102851;
 }
 
 .search__bars--btn:hover {
-  background-color: #102851;
+  background-color: #014ed5;
 }
 
 .search__bars--btn img {
@@ -213,7 +240,7 @@ a {
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 1rem;
-  background-color: #fceaea;
+  background-color: #fff5f5;
 }
 
 .search__looking__tags .tag__wrapper p {

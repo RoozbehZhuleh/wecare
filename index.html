@@ -13,7 +13,7 @@
 <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>    
-<header id="header">
+    <header id="header">
     <div class="container">
         <nav id="nav"> 
         <div class="nav">
@@ -38,7 +38,7 @@
 
 
 <section id="hero">
-        <div class="container">
+        <!-- <div class="container"> -->
             <div class="hero">
                 <div class="hero__text">
                     <div class="hero__text--large">
@@ -78,6 +78,8 @@
                     </div>
                     <div class="hero__image__circle--3">
                         <img class="icon--3 hero__icon" src="./resources/icons/icons8-medical-50-4.png" alt="icon">
+                    </div>
+                    <div class="hero__image__circle--4">
                         <img class="icon--4 hero__icon" src="./resources/icons/icons8-rod-of-asclepius-50.png" alt="icon">
                     </div>
                 </div>
@@ -191,11 +193,14 @@
                         <img src="./resources/icons/icons8-nose-50.png" alt="otolaryngology">
                         <p>Otolaryngology</p>
                     </div>
+                    
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- find doctor -->
 
 <section id="find-doctor">
     <div class="container">
@@ -205,23 +210,30 @@
                 <p>Choose a doctor conveniently according to your needs.</p>
                 <div class="find--left__box">
                     <div class="search-hospitals find__item">
-                        <img src="./resources/icons/icons8-health-50-3.png" alt="health">
-                        <div>
-                            <h3>Search for hospitals</h3>
+                        <div class="find__item__img">
+                            <img src="./resources/icons/icons8-health-50-3.png" alt="health">
+                        </div>
+                            <div class="find__item__text">
+                                <h3>Search for hospitals</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur 
                                 adipisicing elit. Deleniti, deserunt.</p>
                         </div>
                     </div>
                     <div class="appointment find__item">
-                        <img src="./resources/icons/icons8-medical-50-5.png" alt="appointment">
+                        <div class="find__item__img">
+
+                            <img src="./resources/icons/icons8-medical-50-5.png" alt="appointment">
+                        </div>
                         <div>
-                            <h3>Appointment with the best doctor</h3>
+                            <h3 class="find__item__text">Appointment with the best doctor</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, quo.</p>
                         </div>
                     </div>
                     <div class="treatment find__item">
-                        <img src="./resources/icons/icons8-pill-50-3.png" alt="treatment">
-                        <div>
+                        <div class="find__item__img">
+                            <img src="./resources/icons/icons8-pill-50-3.png" alt="treatment">
+                        </div>
+                        <div class="find__item__text">
                             <h3>Get your treatment</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, cupiditate.</p>
                         </div>
@@ -229,8 +241,8 @@
                 </div>
             </div>
             <div class="find--right">
+                <h3>Find the best doctor you need</h3>
                 <div class="floating-card">
-                    <h3>Find the best doctor you need</h3>
                     <div class="floating-card__input">
                         <img src="./resources/icons/icons8-magnifier-50.png" alt="search">
                         <input type="text" placeholder="search doctors">
