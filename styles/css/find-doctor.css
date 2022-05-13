@@ -48,7 +48,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   font-size: 1.5rem;
-  background: linear-gradient(141deg, white 0%, #fdf4f4 51%, #f2f2f2 75%);
+  background: linear-gradient(141deg, white 0%, #e2f5fa 51%, #f2f2f2 75%);
 }
 
 button {
@@ -113,6 +113,31 @@ input {
   }
 }
 
+@keyframes thumb {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+    width: 8rem;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes star {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .find__wrapper {
   display: flex;
   flex-direction: row;
@@ -156,8 +181,9 @@ input {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1vw;
-  background-color: #e8f1ff;
+  background-color: #dce9ff;
   border-radius: 1rem;
+  padding: 1rem;
 }
 
 .find__wrapper .find--left .find__item__img::after {
@@ -173,7 +199,7 @@ input {
 .find__wrapper .find--left .find__item__text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 1vh;
 }
@@ -243,7 +269,7 @@ input {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #e8f1ff;
+  background-color: #dce9ff;
   border-radius: 1rem;
   width: 60%;
 }

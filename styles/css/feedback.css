@@ -113,6 +113,18 @@ input {
   }
 }
 
+@keyframes thumb {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
 .feedback {
   display: flex;
   flex-direction: column;

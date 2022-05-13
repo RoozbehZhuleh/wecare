@@ -113,6 +113,31 @@ input {
   }
 }
 
+@keyframes thumb {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+    width: 8rem;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes star {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .hero {
   display: flex;
   flex-direction: row;
@@ -171,6 +196,10 @@ input {
   border-radius: 0.5rem;
 }
 
+.hero__text__testimonial .doctor-profiles:hover .doctor-profiles__image {
+  animation: star 1s infinite backwards;
+}
+
 .hero__text__testimonial .doctor-profiles__image {
   width: 20%;
 }
@@ -194,6 +223,10 @@ input {
   background-color: #014ed5;
   padding: 1rem;
   border-radius: 0.5rem;
+}
+
+.hero__text__testimonial .patient-ratings:hover .patient-ratings__image {
+  animation: thumb 1s infinite backwards;
 }
 
 .hero__text__testimonial .patient-ratings__image {

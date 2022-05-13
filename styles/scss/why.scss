@@ -81,9 +81,14 @@
             @include flex(column, center, center);
             gap: 2vh;
 
+            
             .checkbox-sentence{
                 @include flex(row, flex-start,center);
+                transition: transform 0.2s linear;
                 gap: 0.5vw;
+                &:hover{
+                    transform: translateX(1rem);
+                }
 
                 img{
                     width: 2vw;

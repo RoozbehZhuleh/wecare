@@ -55,6 +55,12 @@
         .footer__links{
             @include flex(column, center, center);
             gap: 1vh;
+
+            a{
+                &:hover{
+                    color: map-get($font-color, "primary");
+                }
+            }
         }
     }
 

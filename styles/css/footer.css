@@ -113,6 +113,31 @@ input {
   }
 }
 
+@keyframes thumb {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+    width: 8rem;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes star {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -186,5 +211,9 @@ input {
   justify-content: center;
   align-items: center;
   gap: 1vh;
+}
+
+.footer--2 .footer__links a:hover {
+  color: #102851;
 }
 /*# sourceMappingURL=footer.css.map */
