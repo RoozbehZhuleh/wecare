@@ -1,213 +1,197 @@
 @import "./layout.scss";
 
+.hero {
+  @include flex(row, center, center);
+  background-color: transparent;
 
-.hero{
-    @include flex(row,center,center);
-    background-color: transparent;
-   
-    z-index: -5;
+  z-index: -5;
 
-        &__text{
-            @include flex(column,center,center);
-            width: 40vw;
-            gap: 1vh;
+  &__text {
+    @include flex(column, center, flex-start);
+    width: 40vw;
+    gap: 1vh;
 
-            &--large{
-                text-align: center;
-                width: 95%;
-                font-size: map-get($font-size , "xl" );
-                font-weight: map-get($font-weight , "thin");
-                color: map-get($font-color , "primary");
-                line-height: 8vh;
-                margin: 0 0 2vh 0;
-            }
-            
-            &--small{
-                text-align: center;
-                width: 80%;
-                font-size: map-get($font-size , "m");
-                color: map-get($font-color , "other");
-                line-height: 3vh;
-                margin: 0 0 2vh 0;
-            }
+    &--large {
+      text-align: left;
+      width: 95%;
+      font-size: map-get($font-size, "xl");
+      font-weight: map-get($font-weight, "thin");
+      color: map-get($font-color, "primary");
+      line-height: 8vh;
+      margin: 0 0 2vh 0;
+    }
 
+    &--small {
+      text-align: left;
+      width: 80%;
+      font-size: map-get($font-size, "m");
+      color: map-get($font-color, "other");
+      line-height: 3vh;
+      margin: 0 0 2vh 0;
+    }
 
-            &__testimonial{
-                @include flex(row, space-around, center);
-                width: 85%;
-                gap: 1rem;
-            
-                .doctor-profiles{
-                    width: 50%;
-                    @include flex(row,flex-start, center);
-                    font-size: map-get($font-size , "m" );
-                    background-color: $secondary-color;
-                    padding: 1rem;
-                    border-radius: map-get($border-radius, "s" );
+    &__testimonial {
+      @include flex(row, flex-start, center);
+      width: 85%;
+      gap: 1rem;
 
-                    &:hover .doctor-profiles__image{
+      .doctor-profiles {
+        width: 50%;
+        @include flex(row, flex-start, center);
+        font-size: map-get($font-size, "m");
+        background-color: $secondary-color;
+        padding: 1rem;
+        border-radius: map-get($border-radius, "s");
 
-                        animation: star 1s infinite backwards;
-                    }
-
-                    &__image{
-                        width: 20%;
-
-                        img{
-                            width: 80%;
-                        }
-                    }
-
-                    &__text{
-                        width: 80%;
-                        color: map-get($font-color , "secondary");
-                    }
-                }
-
-                .patient-ratings{
-                    width: 50%;
-                    @include flex(row, flex-start, center);
-                    font-size: map-get($font-size , "m" );
-                    background-color: $secondary-color;
-                    padding: 1rem;
-                    border-radius: map-get($border-radius, "s" );
-
-                    &:hover .patient-ratings__image{
-
-                        animation: thumb 1s infinite backwards;
-                    }
-                    
-                    &__image{
-                        width: 20%;
-
-                        img{
-                            width: 80%;
-                        }
-                    }
-
-                    &__text{
-                        width: 80%;
-                        color: map-get($font-color , "secondary");
-                    }
-                
-                }
-            }
-
-
-            
+        &:hover .doctor-profiles__image {
+          animation: star 1s infinite backwards;
         }
 
+        &__image {
+          width: 20%;
 
-        &__image{
-            // width: 80vw;
-            position: relative;
-            left: 5vw;
-            top: 1vh;
-            z-index: 5;
-
-            &__circle--1{
-                @include circle;
-                  width: 42%;
-                  height: 60%;
-                  top: 20%;
-                  left: 29%;
-                  z-index: -1;
-                  -webkit-animation: circle 20s backwards infinite linear;
-                    animation: circle 20s backwards infinite linear;
-                  
-                  
-                  .icon--1{
-                      position: absolute;
-                      width: 12%;
-                      border-radius: 100%;
-                      background-color: $light-color;
-                      padding: 1rem;
-                      z-index: 1;
-                      top: 14%;
-                      left: 3%;
-                      box-shadow: 1px 1px 1rem black;
-                    }
-                    
-                }
-                
-                &__circle--2{
-                    @include circle;
-                    width: 57%;
-                    height: 80%;
-                    top: 10%;
-                    left: 21%;
-                    z-index: -1000;
-                    -webkit-animation: circle 40s backwards infinite linear;
-                            animation: circle 40s backwards infinite linear;
-                    
-                    
-                    .icon--2{
-                        position: absolute;
-                        width: 8%;
-                        border-radius: 100%;
-                        background-color: $light-color;
-                        padding: 1rem;
-                        z-index: 2;
-                        top: 10%;
-                        left: 80%;
-                        box-shadow: 1px 1px 1rem black;
-                    }
-                }
-                
-                &__circle--3{
-                    @include circle;
-                    width: 70%;
-                    height: 98%;
-                    top: 1%;
-                    left: 14%;
-                    z-index: -1;
-                    -webkit-animation: circle 60s backwards infinite linear;
-                            animation: circle 60s backwards infinite linear;
-                    
-                    
-                    .icon--3{
-                        position: absolute;
-                        width: 8%;
-                        border-radius: 100%;
-                        background-color: $light-color;
-                        padding: 1rem;
-                        z-index: 3;
-                        top: 16%;
-                    left: 5%;
-                    box-shadow: 1px 1px 1rem black;
-                     }
-                }
-
-                    &__circle--4{
-                        @include circle;
-                        width: 83%;
-                        height: 118%;
-                        top: -9%;
-                        left: 7%;
-                        z-index: -1;
-                        -webkit-animation: circle 80s backwards infinite linear;
-                                animation: circle 80s backwards infinite linear;
-
-                      .icon--4{
-                    position: absolute;
-                    width: 8%;
-                    border-radius: 100%;
-                    background-color: $light-color;
-                    padding: 1rem;
-                    z-index: 4;
-                    left: 70%;
-                    top: 1%;
-                    box-shadow: 1px 1px 1rem black;
-                      }
-                    }
-
-            img{
-                width: 80rem;
-                z-index: 4;
-                position:relative;
-                
-            }
-
-            
+          img {
+            width: 80%;
+          }
         }
+
+        &__text {
+          width: 80%;
+          color: map-get($font-color, "secondary");
+        }
+      }
+
+      .patient-ratings {
+        width: 50%;
+        @include flex(row, flex-start, center);
+        font-size: map-get($font-size, "m");
+        background-color: $secondary-color;
+        padding: 1rem;
+        border-radius: map-get($border-radius, "s");
+
+        &:hover .patient-ratings__image {
+          animation: thumb 1s infinite backwards;
+        }
+
+        &__image {
+          width: 20%;
+
+          img {
+            width: 80%;
+          }
+        }
+
+        &__text {
+          width: 80%;
+          color: map-get($font-color, "secondary");
+        }
+      }
+    }
+  }
+
+  &__image {
+    // width: 80vw;
+    position: relative;
+    left: 5vw;
+    top: 10vh;
+    z-index: 5;
+
+    &__circle--1 {
+      @include circle;
+      width: 42%;
+      height: 60%;
+      top: 20%;
+      left: 29%;
+      z-index: -1;
+      -webkit-animation: circle 20s backwards infinite linear;
+      animation: circle 20s backwards infinite linear;
+
+      .icon--1 {
+        position: absolute;
+        width: 12%;
+        border-radius: 100%;
+        background-color: $light-color;
+        padding: 1rem;
+        z-index: 1;
+        top: 14%;
+        left: 3%;
+        box-shadow: 1px 1px 1rem black;
+      }
+    }
+
+    &__circle--2 {
+      @include circle;
+      width: 57%;
+      height: 80%;
+      top: 10%;
+      left: 21%;
+      z-index: -1000;
+      -webkit-animation: circle 40s backwards infinite linear;
+      animation: circle 40s backwards infinite linear;
+
+      .icon--2 {
+        position: absolute;
+        width: 8%;
+        border-radius: 100%;
+        background-color: $light-color;
+        padding: 1rem;
+        z-index: 2;
+        top: 10%;
+        left: 80%;
+        box-shadow: 1px 1px 1rem black;
+      }
+    }
+
+    &__circle--3 {
+      @include circle;
+      width: 70%;
+      height: 98%;
+      top: 1%;
+      left: 14%;
+      z-index: -1;
+      -webkit-animation: circle 60s backwards infinite linear;
+      animation: circle 60s backwards infinite linear;
+
+      .icon--3 {
+        position: absolute;
+        width: 8%;
+        border-radius: 100%;
+        background-color: $light-color;
+        padding: 1rem;
+        z-index: 3;
+        top: 16%;
+        left: 5%;
+        box-shadow: 1px 1px 1rem black;
+      }
+    }
+
+    &__circle--4 {
+      @include circle;
+      width: 83%;
+      height: 118%;
+      top: -9%;
+      left: 7%;
+      z-index: -1;
+      -webkit-animation: circle 80s backwards infinite linear;
+      animation: circle 80s backwards infinite linear;
+
+      .icon--4 {
+        position: absolute;
+        width: 8%;
+        border-radius: 100%;
+        background-color: $light-color;
+        padding: 1rem;
+        z-index: 4;
+        left: 70%;
+        top: 1%;
+        box-shadow: 1px 1px 1rem black;
+      }
+    }
+
+    img {
+      width: 72rem;
+      z-index: 4;
+      position: relative;
+    }
+  }
 }
