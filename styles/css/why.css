@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Square+Peg&display=swap");
-@use "sass:map";
 *,
 *::after,
 *::before {
@@ -17,8 +16,8 @@
   --accent-color: $accent-color;
   --light-color: $light-color;
   --dark-color: $dark-color;
-  --font-primary-color: map-get($font-color, "primary" );
-  --font-secondary-color: map-get($font-color, "secondary" );
+  --font-primary-color: map-get($font-color, "primary");
+  --font-secondary-color: map-get($font-color, "secondary");
   --font-other-color: map-get($font-color, "other");
   --font-s: map-get($font-size, "s");
   --font-m: map-get($font-size, "m");
@@ -48,7 +47,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   font-size: 1.5rem;
-  background: linear-gradient(141deg, white 0%, #e2f5fa 51%, #f2f2f2 75%);
+  background: linear-gradient(141deg, rgb(255, 255, 255) 0%, #eefcff 51%, #f2f2f2 75%);
 }
 
 button {
@@ -86,6 +85,14 @@ input {
   outline: none;
 }
 
+@-webkit-keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes circle {
   0% {
     transform: rotate(0);
@@ -94,7 +101,6 @@ input {
     transform: rotate(360deg);
   }
 }
-
 @keyframes wiggle {
   0% {
     transform: rotate(0deg);
@@ -112,7 +118,6 @@ input {
     transform: rotate(0deg);
   }
 }
-
 @keyframes thumb {
   0% {
     transform: rotate(0deg);
@@ -127,7 +132,6 @@ input {
     transform: rotate(0deg);
   }
 }
-
 @keyframes star {
   0% {
     transform: rotate(0deg);
@@ -136,7 +140,14 @@ input {
     transform: rotate(360deg);
   }
 }
-
+@keyframes blob {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   scrollbar-width: auto;
   scrollbar-color: #2d5deb #ffffff;
@@ -157,8 +168,8 @@ input {
 }
 
 #why {
-  background: #d8e8ff;
-  background: linear-gradient(0deg, #d8e8ff 0%, #f9fbff 100%);
+  background: rgb(216, 232, 255);
+  background: linear-gradient(0deg, rgb(216, 232, 255) 0%, rgb(249, 251, 255) 100%);
   height: 70vh;
 }
 
@@ -168,7 +179,6 @@ input {
   justify-content: center;
   align-items: flex-start;
 }
-
 .why--left {
   display: flex;
   flex-direction: row;
@@ -176,12 +186,12 @@ input {
   align-items: flex-start;
   position: relative;
   left: -5vw;
+  border-radius: 30% 70% 55% 45%/88% 27% 73% 12%;
+  background-color: rgb(1, 78, 213);
 }
-
 .why--left img {
   width: 70rem;
 }
-
 .why--left .floating-card--2 {
   position: relative;
   top: 9vh;
@@ -195,10 +205,9 @@ input {
   background-color: #ffffff;
   border-radius: 1rem;
   padding: 1vh;
-  border: 0.5px solid #102851;
-  box-shadow: 0.1rem 0.1rem 1rem #102851;
+  border: 0.5px solid rgb(16, 40, 81);
+  box-shadow: 0.1rem 0.1rem 1rem rgb(16, 40, 81);
 }
-
 .why--left .floating-card--2 .doctor--card {
   display: flex;
   flex-direction: row;
@@ -208,37 +217,31 @@ input {
   border-radius: 1rem;
   padding: 0.5vw;
 }
-
 .why--left .floating-card--2 .doctor--card:hover {
-  background-color: #102851;
+  background-color: rgb(16, 40, 81);
   cursor: pointer;
   color: #f7f7f7;
 }
-
 .why--left .floating-card--2 .doctor--card div {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
-
 .why--left .floating-card--2 .doctor--card div img {
   width: 30%;
   border-radius: 100%;
 }
-
 .why--left .floating-card--2 .doctor--card div img p {
   color: #181131;
   width: 95%;
 }
-
 .why--left .floating-card--2 .doctor--card .i {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
 }
-
 .why--right {
   display: flex;
   flex-direction: column;
@@ -250,13 +253,11 @@ input {
   left: -3vw;
   width: 60%;
 }
-
 .why--right h2 {
   font-size: 3rem;
-  color: #102851;
+  color: rgb(16, 40, 81);
   margin: 0 0 5vh 0;
 }
-
 .why--right .checkbox {
   display: flex;
   flex-direction: column;
@@ -264,7 +265,6 @@ input {
   align-items: center;
   gap: 2vh;
 }
-
 .why--right .checkbox .checkbox-sentence {
   display: flex;
   flex-direction: row;
@@ -273,15 +273,12 @@ input {
   transition: transform 0.2s linear;
   gap: 0.5vw;
 }
-
 .why--right .checkbox .checkbox-sentence:hover {
   transform: translateX(1rem);
 }
-
 .why--right .checkbox .checkbox-sentence img {
   width: 2vw;
 }
-
 .why--right button {
   font-family: inherit;
   padding: 1rem 1.5rem;
@@ -291,12 +288,10 @@ input {
   box-shadow: none;
   transition: all 0.3s ease;
   color: #f7f7f7;
-  background-color: #102851;
+  background-color: rgb(16, 40, 81);
 }
-
 .why--right button:hover {
-  box-shadow: inset 0 0 0 1px #102851;
+  box-shadow: inset 0 0 0 1px rgb(16, 40, 81);
   background-color: #ffffff;
-  color: #102851;
-}
-/*# sourceMappingURL=why.css.map */
+  color: rgb(16, 40, 81);
+}/*# sourceMappingURL=why.css.map */

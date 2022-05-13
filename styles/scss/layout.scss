@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Square+Peg&display=swap');
 @use "sass:map";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Square+Peg&display=swap");
 
 $primary-color: #fff5f5;
-$secondary-color: rgb(1,78,213);
+$secondary-color: rgb(1, 78, 213);
 $third-color: rgb(220, 233, 255);
-$accent-color: rgb(16,40,81);
+$accent-color: rgb(16, 40, 81);
 $light-color: #ffffff;
 $dark-color: #181131;
-  $font-color: (
-    "primary": rgb(16,40,81),
-    "secondary": #f7f7f7,
-    "other": rgb(154, 161, 170)
-  );
-  $border-radius: (
-    "s": 0.5rem,
-    "m": 1rem,
-    "l": 1.5rem,
-  );
-  $font-size: (
+$font-color: (
+  "primary": rgb(16, 40, 81),
+  "secondary": #f7f7f7,
+  "other": rgb(154, 161, 170),
+);
+$border-radius: (
+  "s": 0.5rem,
+  "m": 1rem,
+  "l": 1.5rem,
+);
+$font-size: (
   "s": 1rem,
   "m": 1.4rem,
   "ml": 1.8rem,
@@ -25,14 +25,13 @@ $dark-color: #181131;
   "xl": 3rem,
   "2xl": 4rem,
   "3xl": 5rem,
-  );
-  $font-weight: (
-      "thin": 300,
-      "regular": 400,
-      "medium": 500,
-      "bold": 700,
-  );
-
+);
+$font-weight: (
+  "thin": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
 
 *,
 *::after,
@@ -43,8 +42,6 @@ $dark-color: #181131;
   -webkit-box-sizing: border-box;
 }
 
-
-
 :root {
   --primary-color: $primary-color;
   --secondary-color: $secondary-color;
@@ -52,8 +49,8 @@ $dark-color: #181131;
   --accent-color: $accent-color;
   --light-color: $light-color;
   --dark-color: $dark-color;
-  --font-primary-color: map-get($font-color, "primary" );
-  --font-secondary-color: map-get($font-color, "secondary" );
+  --font-primary-color: map-get($font-color, "primary");
+  --font-secondary-color: map-get($font-color, "secondary");
   --font-other-color: map-get($font-color, "other");
   --font-s: map-get($font-size, "s");
   --font-m: map-get($font-size, "m");
@@ -69,7 +66,6 @@ $dark-color: #181131;
   --border-radius-s: map-get($border-radius, "s");
   --border-radius-m: map-get($border-radius, "m");
   --border-radius-l: map-get($border-radius, "l");
-  
 }
 
 html {
@@ -87,7 +83,7 @@ body {
   background: linear-gradient(
     141deg,
     rgb(255, 255, 255) 0%,
-    #e2f5fa 51%,
+    #eefcff 51%,
     #f2f2f2 75%
   );
 }
@@ -120,15 +116,13 @@ a {
 .btn__primary:hover {
   background: transparent;
   color: var(--dark-color);
-  
+
   box-shadow: inset 0 0 0 0.2rem var(--primary-color);
 }
 
-
-input{
+input {
   outline: none;
 }
-
 
 @mixin flex($direction, $justify, $align) {
   display: flex;
@@ -137,7 +131,7 @@ input{
   align-items: $align;
 }
 
-@mixin btn{
+@mixin btn {
   font-family: inherit;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
@@ -147,82 +141,99 @@ input{
   transition: all 0.3s ease;
 }
 
-@mixin circle{
+@mixin circle {
   border-radius: 100%;
   border: 2px solid rgba(200, 199, 206, 0.35);
   position: absolute;
 }
 
-@-webkit-keyframes circle{
-  0%{
-    transform: rotate(0)
+@-webkit-keyframes circle {
+  0% {
+    transform: rotate(0);
   }
-  
-  100%{
-    transform: rotate(360deg);
 
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-@keyframes circle{
-  0%{
+@keyframes circle {
+  0% {
     transform: rotate(0);
-    
   }
-  
-  100%{
-    transform: rotate(360deg);
 
+  100% {
+    transform: rotate(360deg);
   }
 }
 
 @keyframes wiggle {
-  0% { transform: rotate(0deg); }
- 80% { transform: rotate(0deg); }
- 85% { transform: rotate(5deg); }
- 95% { transform: rotate(-5deg); }
-100% { transform: rotate(0deg); }
-}
-
-@keyframes thumb{
-0%{transform: rotate(0deg);
-}
-50%{
-  transform: rotate(45deg);
-}
-75%{
-  transform: rotate(-45deg)
-}
-100%{
-transform: rotate(0deg);
-}
-}
-
-@keyframes star{
-  0%{ 
+  0% {
     transform: rotate(0deg);
   }
-  100%{ 
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes thumb {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes star {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
 
-
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #2d5deb #ffffff;
+@keyframes blob{
+  0% {
+    transform: rotate(0deg);
   }
+  100%{
+    transform: rotate(360deg);
 
-  *::-webkit-scrollbar {
-    width: 15px;
   }
+}
 
-  *::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #2d5deb #ffffff;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #2d5deb;
-    border-radius: 10px;
-    border: 3px ridge #9d9bbb;
-  }
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #2d5deb;
+  border-radius: 10px;
+  border: 3px ridge #9d9bbb;
+}

@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Square+Peg&display=swap");
-@use "sass:map";
 *,
 *::after,
 *::before {
@@ -17,8 +16,8 @@
   --accent-color: $accent-color;
   --light-color: $light-color;
   --dark-color: $dark-color;
-  --font-primary-color: map-get($font-color, "primary" );
-  --font-secondary-color: map-get($font-color, "secondary" );
+  --font-primary-color: map-get($font-color, "primary");
+  --font-secondary-color: map-get($font-color, "secondary");
   --font-other-color: map-get($font-color, "other");
   --font-s: map-get($font-size, "s");
   --font-m: map-get($font-size, "m");
@@ -48,7 +47,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   font-size: 1.5rem;
-  background: linear-gradient(141deg, white 0%, #e2f5fa 51%, #f2f2f2 75%);
+  background: linear-gradient(141deg, rgb(255, 255, 255) 0%, #eefcff 51%, #f2f2f2 75%);
 }
 
 button {
@@ -86,6 +85,14 @@ input {
   outline: none;
 }
 
+@-webkit-keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes circle {
   0% {
     transform: rotate(0);
@@ -94,7 +101,6 @@ input {
     transform: rotate(360deg);
   }
 }
-
 @keyframes wiggle {
   0% {
     transform: rotate(0deg);
@@ -112,7 +118,6 @@ input {
     transform: rotate(0deg);
   }
 }
-
 @keyframes thumb {
   0% {
     transform: rotate(0deg);
@@ -127,7 +132,6 @@ input {
     transform: rotate(0deg);
   }
 }
-
 @keyframes star {
   0% {
     transform: rotate(0deg);
@@ -136,7 +140,14 @@ input {
     transform: rotate(360deg);
   }
 }
-
+@keyframes blob {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   scrollbar-width: auto;
   scrollbar-color: #2d5deb #ffffff;
@@ -163,7 +174,7 @@ input {
   justify-content: space-around;
   align-items: center;
   gap: 2rem;
-  width: 92%;
+  width: 90%;
   height: 28rem;
   top: -8vh;
   left: 5%;
@@ -173,7 +184,6 @@ input {
   box-shadow: 0.1rem 0.1rem 1rem #181131;
   border-radius: 1.5rem;
 }
-
 .search__bars {
   display: flex;
   flex-direction: row;
@@ -182,7 +192,6 @@ input {
   width: 95%;
   gap: 1rem;
 }
-
 .search__bars--doctor {
   display: flex;
   flex-direction: row;
@@ -194,14 +203,12 @@ input {
   background-color: #fff5f5;
   border-radius: 0.5rem;
 }
-
 .search__bars--doctor input {
   width: 85%;
   padding: 0.8rem 8rem;
   border: none;
   background-color: #fff5f5;
 }
-
 .search__bars--location {
   display: flex;
   flex-direction: row;
@@ -213,14 +220,12 @@ input {
   background-color: #fff5f5;
   border-radius: 0.5rem;
 }
-
 .search__bars--location input {
   width: 85%;
   padding: 1rem 8rem;
   border: none;
   background-color: #fff5f5;
 }
-
 .search__bars--btn {
   font-family: inherit;
   padding: 1rem 1.5rem;
@@ -230,17 +235,14 @@ input {
   box-shadow: none;
   transition: all 0.3s ease;
   width: 9rem;
-  border: 1px solid #102851;
+  border: 1px solid rgb(16, 40, 81);
 }
-
 .search__bars--btn:hover {
-  background-color: #014ed5;
+  background-color: rgb(1, 78, 213);
 }
-
 .search__bars--btn img {
   width: 60%;
 }
-
 .search__looking {
   display: flex;
   flex-direction: column;
@@ -248,12 +250,10 @@ input {
   align-items: flex-start;
   width: 90%;
 }
-
 .search__looking h3 {
   color: #181131;
   margin: 1rem 0;
 }
-
 .search__looking__tags {
   display: flex;
   flex-direction: row;
@@ -261,7 +261,6 @@ input {
   align-items: center;
   gap: 1rem;
 }
-
 .search__looking__tags button {
   font-family: inherit;
   padding: 1rem 1.5rem;
@@ -270,11 +269,10 @@ input {
   border: none;
   box-shadow: none;
   transition: all 0.3s ease;
-  background-color: #dce9ff;
+  background-color: rgb(220, 233, 255);
   text-decoration: none;
-  color: #102851;
+  color: rgb(16, 40, 81);
 }
-
 .search__looking__tags .tag__wrapper {
   display: flex;
   flex-direction: row;
@@ -285,13 +283,10 @@ input {
   border-radius: 1rem;
   background-color: #fff5f5;
 }
-
 .search__looking__tags .tag__wrapper p {
   font-size: 1.4rem;
-  color: #102851;
+  color: rgb(16, 40, 81);
 }
-
 .search__looking__tags .tag__wrapper img {
   width: 1.5rem;
-}
-/*# sourceMappingURL=search.css.map */
+}/*# sourceMappingURL=search.css.map */

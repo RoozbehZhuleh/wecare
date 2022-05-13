@@ -1,82 +1,76 @@
 @import "./layout.scss";
 
-#popular-search{
+#popular-search {
+  width: 100%;
+}
+
+.popular-search {
+  @include flex(column, center, flex-start);
+  // width:90%;
+  padding: 2rem 5rem;
+
+  h2 {
+    position: relative;
+    left: 5vw;
+    padding: 3rem 0;
+    font-size: map-get($font-size, "2xl");
+    font-weight: map-get($font-weight, "medium");
+  }
+
+  &__wrapper {
+    @include flex(row, center, center);
+    gap: 2rem;
     width: 100%;
+  }
+
+  &__titles {
+    color: $accent-color;
+    cursor: pointer;
+    @include flex(column, space-between, center);
+    gap: 2rem;
+    width: 10%;
+    font-weight: map-get($font-weight, "bold");
+    font-size: map-get($font-size, "ml");
+
+    p {
+      transition: all 0.2s linear;
+      &:hover {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  &__line {
+    width: 0.1rem;
+    height: 12rem;
+    border: 1px solid $accent-color;
+  }
 }
 
-.popular-search{
-    @include flex(column, center, flex-start);
-    width:90%;
-    
+.popular__items__wrapper {
+  @include flex(row, space-between, center);
+  width: 90%;
+  gap: 3rem;
+  overflow-x: scroll;
+  padding: 1rem;
 
-
-    h2{
-        position: relative;
-        left: 5vw;
-        padding: 3rem 0;
-        font-size:map-get($font-size, "2xl" );
-        font-weight: map-get($font-weight, "medium")
-    }
-
-
-    &__wrapper{
-        @include flex(row, center, center);
-        gap: 2rem;
-        width: 100%;
-    }
-
-    &__titles{
-        color: $accent-color;
-        cursor: pointer;
-        @include flex(column, space-between, center);
-        gap: 2rem;
-        width: 10%;
-        font-weight: map-get($font-weight, "bold");
-        font-size: map-get($font-size, "ml");
-
-        p{
-            transition: all 0.2s linear;
-            &:hover{
-                transform: translateX(5px);
-            }
-        }
-
-       
-    }
-
-    &__line{
-        width: 0.1rem;
-        height: 12rem;
-        border: 1px solid $accent-color;
-
-    }
-}
-
-.popular__items__wrapper{
-    @include flex(row, space-between, center);
-    width: 90%;
-    gap: 3rem;
-    overflow-x:scroll;
+  .popular__item {
+    @include flex(column, center, center);
     padding: 1rem;
+    border-radius: map-get($border-radius, "s");
+    width: 15%;
+    height: 100%;
+    transition: all 0.2s linear;
+    font-size: map-get($font-size, "ml");
+    box-shadow: 1px 1px 1rem $accent-color;
+    // text-overflow: ellipsis;
+    // overflow: hidden;
+    white-space: nowrap;
 
-    .popular__item{
-        @include flex(column, center, center);
-        padding: 1rem;
-        border-radius: map-get($border-radius, "s" );
-        width: 15%;
-        height: 100%;
-        transition: all 0.2s linear;
-        font-size: map-get($font-size, "ml");
-        box-shadow: 1px 1px 1rem $accent-color;
-        // text-overflow: ellipsis;
-        // overflow: hidden;
-        white-space: nowrap;
-
-
-        &:hover{
-            background-color: $third-color;
-            cursor: pointer;
-            transform: translateY(-2px);
-        }
+    &:hover {
+      background-color: $third-color;
+      cursor: pointer;
+      transform: translateY(-2px);
     }
+  }
 }

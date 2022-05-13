@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Square+Peg&display=swap");
-@use "sass:map";
 *,
 *::after,
 *::before {
@@ -17,8 +16,8 @@
   --accent-color: $accent-color;
   --light-color: $light-color;
   --dark-color: $dark-color;
-  --font-primary-color: map-get($font-color, "primary" );
-  --font-secondary-color: map-get($font-color, "secondary" );
+  --font-primary-color: map-get($font-color, "primary");
+  --font-secondary-color: map-get($font-color, "secondary");
   --font-other-color: map-get($font-color, "other");
   --font-s: map-get($font-size, "s");
   --font-m: map-get($font-size, "m");
@@ -48,7 +47,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   font-size: 1.5rem;
-  background: linear-gradient(141deg, white 0%, #e2f5fa 51%, #f2f2f2 75%);
+  background: linear-gradient(141deg, rgb(255, 255, 255) 0%, #eefcff 51%, #f2f2f2 75%);
 }
 
 button {
@@ -86,6 +85,14 @@ input {
   outline: none;
 }
 
+@-webkit-keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes circle {
   0% {
     transform: rotate(0);
@@ -94,7 +101,6 @@ input {
     transform: rotate(360deg);
   }
 }
-
 @keyframes wiggle {
   0% {
     transform: rotate(0deg);
@@ -112,7 +118,6 @@ input {
     transform: rotate(0deg);
   }
 }
-
 @keyframes thumb {
   0% {
     transform: rotate(0deg);
@@ -127,7 +132,6 @@ input {
     transform: rotate(0deg);
   }
 }
-
 @keyframes star {
   0% {
     transform: rotate(0deg);
@@ -136,7 +140,14 @@ input {
     transform: rotate(360deg);
   }
 }
-
+@keyframes blob {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   scrollbar-width: auto;
   scrollbar-color: #2d5deb #ffffff;
@@ -164,7 +175,6 @@ input {
   gap: 1vw;
   width: 99%;
 }
-
 .find__wrapper .find--left {
   display: flex;
   flex-direction: column;
@@ -173,18 +183,15 @@ input {
   gap: 2vh;
   width: 30%;
 }
-
 .find__wrapper .find--left h2 {
-  color: #102851;
+  color: rgb(16, 40, 81);
   font-size: 3rem;
   margin: 0 0 1vh 0;
 }
-
 .find__wrapper .find--left p {
-  color: #9aa1aa;
+  color: rgb(154, 161, 170);
   margin: 0 0 4vh 0;
 }
-
 .find__wrapper .find--left .find--left__box {
   display: flex;
   flex-direction: column;
@@ -192,28 +199,25 @@ input {
   align-items: flex-start;
   gap: 2vh;
 }
-
 .find__wrapper .find--left .find__item {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1vw;
-  background-color: #dce9ff;
+  background-color: rgb(220, 233, 255);
   border-radius: 1rem;
   padding: 1rem;
 }
-
 .find__wrapper .find--left .find__item__img::after {
   content: "";
   width: 1rem;
   height: 5rem;
-  border: 1px solid #014ed5;
+  border: 1px solid rgb(1, 78, 213);
   position: relative;
   left: -50%;
   top: 3vh;
 }
-
 .find__wrapper .find--left .find__item__text {
   display: flex;
   flex-direction: column;
@@ -221,7 +225,6 @@ input {
   align-items: flex-start;
   gap: 1vh;
 }
-
 .find__wrapper .find--right {
   display: flex;
   flex-direction: column;
@@ -229,14 +232,12 @@ input {
   align-items: center;
   width: 60%;
 }
-
 .find__wrapper .find--right h3 {
-  color: #102851;
+  color: rgb(16, 40, 81);
   position: relative;
   font-size: 3rem;
   top: 15rem;
 }
-
 .find__wrapper .find--blob {
   position: relative;
   width: 80rem;
@@ -244,14 +245,13 @@ input {
   z-index: -1;
   top: 5vh;
   left: 4vw;
+  animation: blob 30s infinite;
 }
-
 .find__wrapper .find--doctor {
   position: absolute;
   z-index: 1;
   width: 75rem;
 }
-
 .find__wrapper .floating-card {
   display: flex;
   flex-direction: column;
@@ -270,11 +270,9 @@ input {
   left: 45vw;
   z-index: 10;
 }
-
 .find__wrapper .floating-card:hover {
   animation: wiggle 1s infinite;
 }
-
 .find__wrapper .floating-card button {
   font-family: inherit;
   padding: 1rem 1.5rem;
@@ -287,20 +285,17 @@ input {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #dce9ff;
+  background-color: rgb(1, 78, 213);
   border-radius: 1rem;
   width: 60%;
 }
-
 .find__wrapper .floating-card button:hover {
-  background-color: #102851;
+  background-color: rgb(16, 40, 81);
   color: #f7f7f7;
 }
-
 .find__wrapper .floating-card button img {
   width: 2vw;
 }
-
 .find__wrapper .floating-card__input {
   display: flex;
   flex-direction: row;
@@ -310,14 +305,11 @@ input {
   background-color: #ffffff;
   width: 18rem;
 }
-
 .find__wrapper .floating-card__input img {
   width: 1.5vw;
 }
-
 .find__wrapper .floating-card__input input {
   padding: 0.5vw;
   width: 70%;
   border: none;
-}
-/*# sourceMappingURL=find-doctor.css.map */
+}/*# sourceMappingURL=find-doctor.css.map */

@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Square+Peg&display=swap");
-@use "sass:map";
 *,
 *::after,
 *::before {
@@ -17,8 +16,8 @@
   --accent-color: $accent-color;
   --light-color: $light-color;
   --dark-color: $dark-color;
-  --font-primary-color: map-get($font-color, "primary" );
-  --font-secondary-color: map-get($font-color, "secondary" );
+  --font-primary-color: map-get($font-color, "primary");
+  --font-secondary-color: map-get($font-color, "secondary");
   --font-other-color: map-get($font-color, "other");
   --font-s: map-get($font-size, "s");
   --font-m: map-get($font-size, "m");
@@ -48,7 +47,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   font-size: 1.5rem;
-  background: linear-gradient(141deg, white 0%, #e2f5fa 51%, #f2f2f2 75%);
+  background: linear-gradient(141deg, rgb(255, 255, 255) 0%, #eefcff 51%, #f2f2f2 75%);
 }
 
 button {
@@ -86,6 +85,14 @@ input {
   outline: none;
 }
 
+@-webkit-keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes circle {
   0% {
     transform: rotate(0);
@@ -94,7 +101,6 @@ input {
     transform: rotate(360deg);
   }
 }
-
 @keyframes wiggle {
   0% {
     transform: rotate(0deg);
@@ -112,7 +118,6 @@ input {
     transform: rotate(0deg);
   }
 }
-
 @keyframes thumb {
   0% {
     transform: rotate(0deg);
@@ -127,7 +132,6 @@ input {
     transform: rotate(0deg);
   }
 }
-
 @keyframes star {
   0% {
     transform: rotate(0deg);
@@ -136,7 +140,14 @@ input {
     transform: rotate(360deg);
   }
 }
-
+@keyframes blob {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   scrollbar-width: auto;
   scrollbar-color: #2d5deb #ffffff;
@@ -162,8 +173,8 @@ input {
   height: 80vh;
   top: 1vh;
   z-index: 5;
-  background: #d8e8ff;
-  background: linear-gradient(0deg, #d8e8ff 0%, #f9fbff 100%);
+  background: rgb(216, 232, 255);
+  background: linear-gradient(0deg, rgb(216, 232, 255) 0%, rgb(249, 251, 255) 100%);
 }
 
 #nav {
@@ -180,46 +191,38 @@ input {
   position: relative;
   top: 2vh;
 }
-
 .nav__logo {
   width: 14%;
   cursor: pointer;
 }
-
 .nav__logo img {
   width: 90%;
 }
-
 .nav__links__wrapper {
   width: 40%;
 }
-
 .nav__links__wrapper .links {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
-
 .nav__links__wrapper .links .links__item {
-  transition: all .2s linear;
+  transition: all 0.2s linear;
   cursor: pointer;
 }
-
 .nav__links__wrapper .links .links__item:hover a {
-  background-color: #102851;
+  background-color: rgb(16, 40, 81);
   color: #f7f7f7;
   border-radius: 1rem;
 }
-
 .nav__links__wrapper .links .links__item a {
-  color: #102851;
+  color: rgb(16, 40, 81);
   font-size: 1.8rem;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
   padding: 1rem;
   border-radius: 1rem;
 }
-
 .nav__buttons__wrapper {
   display: flex;
   flex-direction: row;
@@ -229,7 +232,6 @@ input {
   width: 30%;
   z-index: 25;
 }
-
 .nav__buttons__wrapper .btn--login {
   font-family: inherit;
   padding: 1rem 1.5rem;
@@ -241,12 +243,10 @@ input {
   background-color: transparent;
   font-size: 1.8rem;
 }
-
 .nav__buttons__wrapper .btn--login:hover {
-  background-color: #102851;
+  background-color: rgb(16, 40, 81);
   color: #f7f7f7;
 }
-
 .nav__buttons__wrapper .btn--signup {
   font-family: inherit;
   padding: 1rem 1.5rem;
@@ -255,12 +255,10 @@ input {
   border: none;
   box-shadow: none;
   transition: all 0.3s ease;
-  background-color: #014ed5;
+  background-color: rgb(1, 78, 213);
   color: #f7f7f7;
   font-size: 1.8rem;
 }
-
 .nav__buttons__wrapper .btn--signup:hover {
-  background-color: #102851;
-}
-/*# sourceMappingURL=navbar.css.map */
+  background-color: rgb(16, 40, 81);
+}/*# sourceMappingURL=navbar.css.map */

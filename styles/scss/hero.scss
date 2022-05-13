@@ -1,3 +1,4 @@
+@use "sass:map";
 @import "./layout.scss";
 
 .hero {
@@ -8,13 +9,13 @@
 
   &__text {
     @include flex(column, center, flex-start);
-    width: 40vw;
+    width: 35%;
     gap: 1vh;
 
     &--large {
       text-align: left;
       width: 95%;
-      font-size: map-get($font-size, "xl");
+      font-size: map-get($font-size, "2xl");
       font-weight: map-get($font-weight, "thin");
       color: map-get($font-color, "primary");
       line-height: 8vh;
@@ -189,7 +190,7 @@
     }
 
     img {
-      width: 72rem;
+      width: 70rem;
       z-index: 4;
       position: relative;
     }

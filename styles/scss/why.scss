@@ -1,113 +1,115 @@
 @import "./layout.scss";
 
-#why{
-    background: rgb(216,232,255);
-    background: linear-gradient(0deg, rgba(216,232,255,1) 0%, rgba(249,251,255,1) 100%);
-    height: 70vh;
+#why {
+  background: rgb(216, 232, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(216, 232, 255, 1) 0%,
+    rgba(249, 251, 255, 1) 100%
+  );
+  height: 70vh;
 }
 
-.why{
-    @include flex(row, center, flex-start);
+.why {
+  @include flex(row, center, flex-start);
 
-    &--left{
-        @include flex(row, flex-start, flex-start);
-        position: relative;
-        left: -5vw;
+  &--left {
+    @include flex(row, flex-start, flex-start);
+    position: relative;
+    left: -5vw;
+    border-radius: 30% 70% 55% 45% / 88% 27% 73% 12%;
+    background-color: $secondary-color;
 
-
-        img{
-            width:70rem;
-        }
-
-        .floating-card--2{
-            position: relative;
-            top: 9vh;
-            left: -10vw;
-            @include flex(column, center, flex-start);
-            gap: 1vh;
-            width: 15vw;
-            background-color: $light-color;
-            border-radius: map-get($border-radius, "m" );
-            padding: 1vh;
-            border: 0.5px solid $accent-color;
-            box-shadow: 0.1rem 0.1rem 1rem $accent-color;
-
-            .doctor--card{
-                @include flex(row, flex-start, center);
-                width: 100%;
-                border-radius: map-get($border-radius, "m" );
-                padding: 0.5vw;
-
-                &:hover{
-                    background-color:$accent-color;
-                    cursor: pointer;
-                    color: map-get($font-color, "secondary" )
-                }
-
-                div{
-                    @include flex(row, flex-start, center);
-                    img{
-                        width: 30%;
-                        border-radius: 100%;
-                        p{
-                            color: $dark-color;
-                            width: 95%;
-                        }
-                    }
-                }
-
-                .i{
-                    @include flex(row, center, flex-end);
-                }
-            }
-        }
+    img {
+      width: 70rem;
     }
 
-    &--right{
-        @include flex(column, center,center);
-        gap: 1vh;
-        position: relative;
-        top: 12vh;
-        left: -3vw;
-        width: 60%;
+    .floating-card--2 {
+      position: relative;
+      top: 9vh;
+      left: -10vw;
+      @include flex(column, center, flex-start);
+      gap: 1vh;
+      width: 15vw;
+      background-color: $light-color;
+      border-radius: map-get($border-radius, "m");
+      padding: 1vh;
+      border: 0.5px solid $accent-color;
+      box-shadow: 0.1rem 0.1rem 1rem $accent-color;
 
-        h2{
-            font-size: map-get($font-size, "xl");
-            color: map-get($font-color, "primary" );
-            margin: 0 0 5vh 0;
+      .doctor--card {
+        @include flex(row, flex-start, center);
+        width: 100%;
+        border-radius: map-get($border-radius, "m");
+        padding: 0.5vw;
+
+        &:hover {
+          background-color: $accent-color;
+          cursor: pointer;
+          color: map-get($font-color, "secondary");
         }
 
-        .checkbox{
-            @include flex(column, center, center);
-            gap: 2vh;
-
-            
-            .checkbox-sentence{
-                @include flex(row, flex-start,center);
-                transition: transform 0.2s linear;
-                gap: 0.5vw;
-                &:hover{
-                    transform: translateX(1rem);
-                }
-
-                img{
-                    width: 2vw;
-                }
+        div {
+          @include flex(row, flex-start, center);
+          img {
+            width: 30%;
+            border-radius: 100%;
+            p {
+              color: $dark-color;
+              width: 95%;
             }
+          }
         }
 
-        button{
-            @include btn;
-            color: map-get($font-color, "secondary");
-            background-color:$accent-color;
-
-            &:hover{
-                box-shadow: inset 0 0 0 1px $accent-color;
-                background-color:$light-color;
-                color: map-get($font-color, "primary" );
-            }
+        .i {
+          @include flex(row, center, flex-end);
         }
+      }
+    }
+  }
+
+  &--right {
+    @include flex(column, center, center);
+    gap: 1vh;
+    position: relative;
+    top: 12vh;
+    left: -3vw;
+    width: 60%;
+
+    h2 {
+      font-size: map-get($font-size, "xl");
+      color: map-get($font-color, "primary");
+      margin: 0 0 5vh 0;
     }
 
+    .checkbox {
+      @include flex(column, center, center);
+      gap: 2vh;
 
+      .checkbox-sentence {
+        @include flex(row, flex-start, center);
+        transition: transform 0.2s linear;
+        gap: 0.5vw;
+        &:hover {
+          transform: translateX(1rem);
+        }
+
+        img {
+          width: 2vw;
+        }
+      }
+    }
+
+    button {
+      @include btn;
+      color: map-get($font-color, "secondary");
+      background-color: $accent-color;
+
+      &:hover {
+        box-shadow: inset 0 0 0 1px $accent-color;
+        background-color: $light-color;
+        color: map-get($font-color, "primary");
+      }
+    }
+  }
 }
