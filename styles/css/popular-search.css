@@ -48,7 +48,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   font-size: 1.5rem;
-  background: linear-gradient(141deg, white 0%, #fdf4f4 51%, #f2f2f2 75%);
+  background: linear-gradient(141deg, white 0%, #e2f5fa 51%, #f2f2f2 75%);
 }
 
 button {
@@ -118,10 +118,22 @@ input {
     transform: rotate(0deg);
   }
   50% {
+    transform: rotate(45deg);
+  }
+  75% {
     transform: rotate(-45deg);
   }
   100% {
-    transform: rotate(45deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes star {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -134,7 +146,7 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 99%;
+  width: 100%;
 }
 
 .popular-search h2 {
@@ -172,7 +184,7 @@ input {
 }
 
 .popular-search__titles p:hover {
-  transform: translatex(5px);
+  transform: translateX(5px);
 }
 
 .popular-search__line {
@@ -186,7 +198,7 @@ input {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 90%;
   gap: 3rem;
   overflow-x: scroll;
   padding: 1rem;
@@ -204,10 +216,11 @@ input {
   transition: all 0.2s linear;
   font-size: 1.8rem;
   box-shadow: 1px 1px 1rem #102851;
+  white-space: nowrap;
 }
 
 .popular__items__wrapper .popular__item:hover {
-  background-color: #e8f1ff;
+  background-color: #dce9ff;
   cursor: pointer;
   transform: translateY(-2px);
 }

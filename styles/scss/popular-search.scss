@@ -6,7 +6,7 @@
 
 .popular-search{
     @include flex(column, center, flex-start);
-    width:99%;
+    width:100%;
     
 
 
@@ -37,7 +37,7 @@
         p{
             transition: all 0.2s linear;
             &:hover{
-                transform: translatex(5px);
+                transform: translateX(5px);
             }
         }
 
@@ -54,7 +54,7 @@
 
 .popular__items__wrapper{
     @include flex(row, space-between, center);
-    width: 80%;
+    width: 90%;
     gap: 3rem;
     overflow-x:scroll;
     padding: 1rem;
@@ -68,6 +68,9 @@
         transition: all 0.2s linear;
         font-size: map-get($font-size, "ml");
         box-shadow: 1px 1px 1rem $accent-color;
+        // text-overflow: ellipsis;
+        // overflow: hidden;
+        white-space: nowrap;
 
 
         &:hover{
