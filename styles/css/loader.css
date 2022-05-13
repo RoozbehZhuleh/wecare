@@ -1,0 +1,22 @@
+.btn__loader {
+  height: 40px;
+  width: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  border: 1px solid #1D9AF2;
+  opacity: 1;
+  animation: spinner4 800ms linear infinite;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  z-index: 10;
+}
+
+@keyframes spinner4 {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=loader.css.map */
