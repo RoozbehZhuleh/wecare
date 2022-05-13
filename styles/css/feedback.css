@@ -48,7 +48,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   font-size: 1.5rem;
-  background: linear-gradient(141deg, white 0%, #fdf4f4 51%, #f2f2f2 75%);
+  background: linear-gradient(141deg, white 0%, #e2f5fa 51%, #f2f2f2 75%);
 }
 
 button {
@@ -118,10 +118,23 @@ input {
     transform: rotate(0deg);
   }
   50% {
+    transform: rotate(45deg);
+  }
+  75% {
     transform: rotate(-45deg);
+    width: 8rem;
   }
   100% {
-    transform: rotate(45deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes star {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -152,6 +165,8 @@ input {
 }
 
 .feedback .feedback--left {
+  border-radius: 66% 34% 70% 30% / 30% 84% 16% 70%;
+  background-color: rgba(80, 255, 214, 0.308);
   width: 50%;
 }
 
@@ -178,7 +193,7 @@ input {
   border: 0.5px solid #102851;
   border-radius: 1.5rem;
   padding: 2vw 0;
-  background-color: #e8f1ff;
+  background-color: #dce9ff;
   box-shadow: 0.1rem 0.1rem 1rem #102851;
 }
 
