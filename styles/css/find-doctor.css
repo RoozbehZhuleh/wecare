@@ -82,21 +82,14 @@
   justify-content: center;
   align-items: center;
 }
-.find__wrapper .find--blob {
-  position: relative;
-  width: 80rem;
-  opacity: 0.5;
-  z-index: -1;
-  top: 5vh;
-  left: 4vw;
-  -webkit-animation: blob 30s infinite;
-  animation: blob 30s infinite;
-}
 .find__wrapper .find--doctor {
   position: absolute;
   left: 60%;
   z-index: 1;
   width: 40rem;
+  background-color: rgb(1, 78, 213);
+  border-radius: 55% 45% 67% 33%/37% 92% 8% 63%;
+  animation: find-bg 20s infinite linear;
 }
 .find__wrapper .floating-card {
   display: flex;

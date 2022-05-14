@@ -20,7 +20,6 @@
   border-radius: 57% 43% 59% 41%/100% 53% 47% 0%;
   background-color: rgb(1, 78, 213);
   padding: 2rem;
-  animation: why-bg 10s infinite linear;
 }
 .why--left .why--doc {
   width: 32rem;
@@ -90,7 +89,7 @@
 }
 .why--right h2 {
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: 450;
   color: rgb(16, 40, 81);
   margin: 0 0 5vh 0;
 }

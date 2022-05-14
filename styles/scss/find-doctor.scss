@@ -92,21 +92,24 @@
     @include flex(column, center, center);
   }
 
-  .find--blob {
-    position: relative;
-    width: 80rem;
-    opacity: 0.5;
-    z-index: -1;
-    top: 5vh;
-    left: 4vw;
-    -webkit-animation: blob 30s infinite;
-    animation: blob 30s infinite;
-  }
+  // .find--blob {
+  //   position: relative;
+  //   width: 80rem;
+  //   opacity: 0.5;
+  //   z-index: -1;
+  //   top: 5vh;
+  //   left: 4vw;
+  //   -webkit-animation: blob 30s infinite;
+  //   animation: blob 30s infinite;
+  // }
   .find--doctor {
     position: absolute;
     left: 60%;
     z-index: 1;
     width: 40rem;
+    background-color: $secondary-color;
+    border-radius: 55% 45% 67% 33% / 37% 92% 8% 63%;
+    animation: find-bg 20s infinite linear;
   }
 
   .floating-card {

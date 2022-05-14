@@ -8,12 +8,12 @@
   width: 100%;
 }
 .feedback h3 {
-  font-weight: 500;
+  font-weight: 550;
   font-size: 4rem;
   color: rgb(16, 40, 81);
 }
 .feedback p {
-  color: rgb(154, 161, 170);
+  color: rgb(116, 120, 127);
   font-size: 1.8rem;
 }
 .feedback__wrapper {
@@ -23,12 +23,12 @@
   align-items: center;
 }
 .feedback .feedback--left {
-  border-radius: 66% 34% 70% 30%/30% 84% 16% 70%;
-  background-color: rgb(1, 78, 213);
   width: 50%;
-  animation: feedback-bg 15s linear infinite;
 }
 .feedback .feedback--left img {
+  border-radius: 66% 34% 70% 30%/30% 84% 16% 70%;
+  background-color: rgb(1, 78, 213);
+  animation: feedback-bg 15s linear infinite;
   width: 90%;
 }
 .feedback .feedback--right {
@@ -70,11 +70,11 @@
   width: 70%;
 }
 .feedback .feedback--right .patient-profile .patient-text .patient-name {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: rgb(16, 40, 81);
 }
 .feedback .feedback--right .patient-profile .patient-text .patient-location {
-  color: rgb(154, 161, 170);
+  color: rgb(116, 120, 127);
 }
 .feedback .feedback--right .patient-profile .patient-text .patient-stars {
   width: 100%;
@@ -83,7 +83,7 @@
   width: 10%;
 }
 .feedback .feedback--right .patient-comment {
-  color: rgb(154, 161, 170);
+  color: rgb(116, 120, 127);
   width: 90%;
 }
 .feedback .feedback--right .slider {

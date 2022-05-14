@@ -166,12 +166,24 @@ section {
     transform: rotate(360deg);
   }
 }
-@keyframes blob {
+@-webkit-keyframes why-bg {
   0% {
-    transform: rotate(0deg);
+    border-radius: 57% 43% 59% 41%/100% 53% 47% 0%;
+  }
+  25% {
+    border-radius: 24% 76% 17% 83%/93% 39% 61% 7%;
+  }
+  50% {
+    border-radius: 24% 76% 6% 94%/100% 39% 61% 0%;
+  }
+  75% {
+    border-radius: 33% 67% 61% 39%/52% 81% 19% 48%;
+  }
+  90% {
+    border-radius: 44% 56% 49% 51%/52% 39% 61% 48%;
   }
   100% {
-    transform: rotate(360deg);
+    border-radius: 57% 43% 59% 41%/100% 53% 47% 0%;
   }
 }
 @keyframes why-bg {
@@ -194,6 +206,26 @@ section {
     border-radius: 57% 43% 59% 41%/100% 53% 47% 0%;
   }
 }
+@-webkit-keyframes feedback-bg {
+  0% {
+    border-radius: 66% 34% 70% 30%/30% 84% 16% 70%;
+  }
+  25% {
+    border-radius: 24% 76% 17% 83%/93% 39% 61% 7%;
+  }
+  50% {
+    border-radius: 24% 76% 6% 94%/100% 39% 61% 0%;
+  }
+  75% {
+    border-radius: 33% 67% 61% 39%/52% 81% 19% 48%;
+  }
+  90% {
+    border-radius: 44% 56% 49% 51%/52% 39% 61% 48%;
+  }
+  100% {
+    border-radius: 66% 34% 70% 30%/30% 84% 16% 70%;
+  }
+}
 @keyframes feedback-bg {
   0% {
     border-radius: 66% 34% 70% 30%/30% 84% 16% 70%;
@@ -212,6 +244,46 @@ section {
   }
   100% {
     border-radius: 66% 34% 70% 30%/30% 84% 16% 70%;
+  }
+}
+@-webkit-keyframes find-bg {
+  0% {
+    border-radius: 55% 45% 67% 33%/37% 92% 8% 63%;
+  }
+  25% {
+    border-radius: 24% 76% 17% 83%/93% 39% 61% 7%;
+  }
+  50% {
+    border-radius: 24% 76% 6% 94%/100% 39% 61% 0%;
+  }
+  75% {
+    border-radius: 33% 67% 61% 39%/52% 81% 19% 48%;
+  }
+  90% {
+    border-radius: 44% 56% 49% 51%/52% 39% 61% 48%;
+  }
+  100% {
+    border-radius: 55% 45% 67% 33%/37% 92% 8% 63%;
+  }
+}
+@keyframes find-bg {
+  0% {
+    border-radius: 55% 45% 67% 33%/37% 92% 8% 63%;
+  }
+  25% {
+    border-radius: 24% 76% 17% 83%/93% 39% 61% 7%;
+  }
+  50% {
+    border-radius: 24% 76% 6% 94%/100% 39% 61% 0%;
+  }
+  75% {
+    border-radius: 33% 67% 61% 39%/52% 81% 19% 48%;
+  }
+  90% {
+    border-radius: 44% 56% 49% 51%/52% 39% 61% 48%;
+  }
+  100% {
+    border-radius: 55% 45% 67% 33%/37% 92% 8% 63%;
   }
 }
 * {
