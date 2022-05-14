@@ -1,15 +1,14 @@
 @import "./mixins.scss";
 
 .specialists {
-  @include flex(column, space-around, center);
+  @include flex(column, center, center);
   margin: 5vh 0 0 0;
-  gap: 5vh;
+  gap: 2vh;
 
-  h3 {
-    color: map-get($font-color, "primary");
-  }
   .sp--title {
     font-size: map-get($font-size, "2xl");
+    color: map-get($font-color, "primary");
+    font-weight: map-get($font-weight, "medium");
   }
 
   p {

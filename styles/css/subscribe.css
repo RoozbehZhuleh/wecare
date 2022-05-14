@@ -17,7 +17,8 @@
 }
 .subscribe h2 {
   color: #ffffff;
-  font-size: 4rem;
+  font-size: 3rem;
+  font-weight: 600;
 }
 .subscribe p {
   color: #ffffff;
@@ -29,10 +30,10 @@
   align-items: center;
   background-color: #ffffff;
   border-radius: 1rem;
-  padding: 0.5vh 1vw;
+  padding: 0.5rem 1rem;
 }
 .subscribe .subscribe-input input {
-  padding: 2vh 3vw;
+  padding: 2rem;
   border: none;
   border-radius: 1rem;
   font-size: 1.8rem;

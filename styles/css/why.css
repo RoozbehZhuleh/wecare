@@ -34,8 +34,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 1vh;
-  width: 25rem;
+  width: 28rem;
   background-color: #ffffff;
   border-radius: 1rem;
   padding: 1vh;
@@ -48,6 +47,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  gap: 9rem;
   border-radius: 1rem;
   padding: 0.5vw;
 }
@@ -57,10 +57,12 @@
   color: #f7f7f7;
 }
 .why--left .floating-card--2 .doctor--card div {
+  gap: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  width: 70%;
 }
 .why--left .floating-card--2 .doctor--card div img {
   width: 4rem;
@@ -75,6 +77,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
+  width: 3%;
 }
 .why--right {
   display: flex;
@@ -86,7 +89,8 @@
   top: 12vh;
 }
 .why--right h2 {
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: 400;
   color: rgb(16, 40, 81);
   margin: 0 0 5vh 0;
 }
@@ -102,6 +106,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  font-size: 1.8rem;
   transition: transform 0.2s linear;
   gap: 0.5vw;
 }

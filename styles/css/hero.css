@@ -17,15 +17,16 @@
 .hero__text--large {
   text-align: left;
   font-size: 4rem;
-  font-weight: 300;
+  font-weight: 400;
   color: rgb(16, 40, 81);
   line-height: 8vh;
+  letter-spacing: 2px;
   margin: 0 0 2vh 0;
 }
 .hero__text--small {
   text-align: left;
   font-size: 1.8rem;
-  color: rgb(154, 161, 170);
+  color: rgb(116, 120, 127);
   line-height: 3vh;
   margin: 0 0 2vh 0;
 }

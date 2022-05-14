@@ -16,7 +16,8 @@
 
   h2 {
     color: $light-color;
-    font-size: map-get($font-size, "2xl");
+    font-size: map-get($font-size, "xl");
+    font-weight: map-get($font-weight, "medium");
   }
   p {
     color: $light-color;
@@ -26,10 +27,10 @@
     @include flex(row, center, center);
     background-color: $light-color;
     border-radius: map-get($border-radius, "m");
-    padding: 0.5vh 1vw;
+    padding: 0.5rem 1rem;
 
     input {
-      padding: 2vh 3vw;
+      padding: 2rem;
       border: none;
       border-radius: map-get($border-radius, "m");
       font-size: map-get($font-size, "ml");

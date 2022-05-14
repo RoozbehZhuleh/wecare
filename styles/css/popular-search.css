@@ -1,5 +1,5 @@
 #popular-search {
-  width: 100%;
+  padding: 4rem 0 0 0;
 }
 
 .popular-search {
@@ -7,13 +7,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  gap: 2rem;
 }
 .popular-search h2 {
-  position: relative;
-  left: 5vw;
-  padding: 3rem 0;
+  color: rgb(16, 40, 81);
   font-size: 4rem;
-  font-weight: 500;
+  font-weight: 450;
 }
 .popular-search__wrapper {
   display: flex;
@@ -54,7 +53,6 @@
   align-items: center;
   width: 90%;
   gap: 3rem;
-  overflow-x: scroll;
   padding: 1rem;
 }
 .popular__items__wrapper .popular__item {
@@ -64,12 +62,15 @@
   align-items: center;
   padding: 1rem;
   border-radius: 0.5rem;
-  width: 15%;
-  height: 100%;
+  width: 18rem;
+  height: 12rem;
   transition: all 0.2s linear;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   box-shadow: 1px 1px 1rem rgb(16, 40, 81);
   white-space: nowrap;
+}
+.popular__items__wrapper .popular__item img {
+  width: 7rem;
 }
 .popular__items__wrapper .popular__item:hover {
   background-color: rgb(220, 233, 255);

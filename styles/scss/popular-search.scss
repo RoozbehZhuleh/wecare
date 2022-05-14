@@ -1,19 +1,17 @@
 @import "./mixins.scss";
 
 #popular-search {
-  width: 100%;
+  padding: 4rem 0 0 0;
 }
 
 .popular-search {
   @include flex(column, center, flex-start);
-  // width:90%;
+  gap: 2rem;
 
   h2 {
-    position: relative;
-    left: 5vw;
-    padding: 3rem 0;
+    color: $accent-color;
     font-size: map-get($font-size, "2xl");
-    font-weight: map-get($font-weight, "medium");
+    font-weight: map-get($font-weight, "regular");
   }
 
   &__wrapper {
@@ -50,21 +48,24 @@
   @include flex(row, space-between, center);
   width: 90%;
   gap: 3rem;
-  overflow-x: scroll;
   padding: 1rem;
 
   .popular__item {
     @include flex(column, center, center);
     padding: 1rem;
     border-radius: map-get($border-radius, "s");
-    width: 15%;
-    height: 100%;
+    width: 18rem;
+    height: 12rem;
     transition: all 0.2s linear;
-    font-size: map-get($font-size, "ml");
+    font-size: map-get($font-size, "m");
     box-shadow: 1px 1px 1rem $accent-color;
     // text-overflow: ellipsis;
     // overflow: hidden;
     white-space: nowrap;
+
+    img {
+      width: 7rem;
+    }
 
     &:hover {
       background-color: $third-color;

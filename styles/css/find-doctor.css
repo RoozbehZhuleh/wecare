@@ -1,10 +1,13 @@
+#find-doctor {
+  padding: 10rem 0 0 0;
+}
+
 .find__wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
-  gap: 3rem;
-  width: 99%;
+  gap: 6rem;
 }
 .find__wrapper .find--left {
   display: flex;
@@ -12,15 +15,20 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 2vh;
-  width: 30%;
+}
+.find__wrapper .find--left .find--left__box {
+  width: 50rem;
 }
 .find__wrapper .find--left h2 {
   color: rgb(16, 40, 81);
-  font-size: 3rem;
+  font-weight: 450;
+  font-size: 4rem;
   margin: 0 0 1vh 0;
+  width: 40rem;
 }
 .find__wrapper .find--left p {
-  color: rgb(154, 161, 170);
+  color: rgb(116, 120, 127);
+  font-size: 1.8rem;
   margin: 0 0 4vh 0;
 }
 .find__wrapper .find--left .find--left__box {
@@ -36,18 +44,30 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1vw;
+  height: 12rem;
   background-color: rgb(220, 233, 255);
   border-radius: 1rem;
   padding: 1rem;
 }
-.find__wrapper .find--left .find__item__img::after {
+.find__wrapper .find--left .find__item:before {
   content: "";
-  width: 1rem;
-  height: 65rem;
-  border: 1px solid rgb(1, 78, 213);
+  border: 1px solid rgb(16, 40, 81);
+  width: 1px;
+  height: 4rem;
   position: relative;
-  left: -50%;
-  top: 3vh;
+  top: 6rem;
+  left: 4rem;
+}
+.find__wrapper .find--left .find__item h3 {
+  color: rgb(16, 40, 81);
+  font-weight: 450;
+  font-size: 2.2rem;
+  text-overflow: clip;
+}
+.find__wrapper .find--left .find__item p {
+  color: rgb(116, 120, 127);
+  font-size: 1.4rem;
+  margin: 0 0 4vh 0;
 }
 .find__wrapper .find--left .find__item__text {
   display: flex;
@@ -61,13 +81,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60%;
-}
-.find__wrapper .find--right h3 {
-  color: rgb(16, 40, 81);
-  position: relative;
-  font-size: 3rem;
-  top: 15rem;
 }
 .find__wrapper .find--blob {
   position: relative;

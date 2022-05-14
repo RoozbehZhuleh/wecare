@@ -34,8 +34,8 @@
       top: 9vh;
       // left: -10vw;
       @include flex(column, center, flex-start);
-      gap: 1vh;
-      width: 25rem;
+      // gap: 1vh;
+      width: 28rem;
       background-color: $light-color;
       border-radius: map-get($border-radius, "m");
       padding: 1vh;
@@ -45,6 +45,7 @@
       .doctor--card {
         @include flex(row, flex-start, center);
         width: 100%;
+        gap: 9rem;
         border-radius: map-get($border-radius, "m");
         padding: 0.5vw;
 
@@ -55,7 +56,9 @@
         }
 
         div {
+          gap: 1rem;
           @include flex(row, flex-start, center);
+          width: 70%;
           img {
             width: 4rem;
             border-radius: 100%;
@@ -68,6 +71,7 @@
 
         .i {
           @include flex(row, center, flex-end);
+          width: 3%;
         }
       }
     }
@@ -82,7 +86,8 @@
     // width: 60%;
 
     h2 {
-      font-size: map-get($font-size, "xl");
+      font-size: map-get($font-size, "2xl");
+      font-weight: map-get($font-weight, "regular");
       color: map-get($font-color, "primary");
       margin: 0 0 5vh 0;
     }
@@ -93,6 +98,7 @@
 
       .checkbox-sentence {
         @include flex(row, flex-start, center);
+        font-size: map-get($font-size, "ml");
         transition: transform 0.2s linear;
         gap: 0.5vw;
         &:hover {

@@ -15,9 +15,10 @@
       text-align: left;
       // width: 95%;
       font-size: map-get($font-size, "2xl");
-      font-weight: map-get($font-weight, "thin");
+      font-weight: map-get($font-weight, "regular");
       color: map-get($font-color, "primary");
       line-height: 8vh;
+      letter-spacing: 2px;
       margin: 0 0 2vh 0;
     }
 

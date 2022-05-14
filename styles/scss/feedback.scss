@@ -7,12 +7,14 @@
   width: 100%;
 
   h3 {
+    font-weight: map-get($font-weight, "medium");
     font-size: map-get($font-size, "2xl");
     color: $accent-color;
   }
 
   p {
     color: map-get($font-color, "other");
+    font-size: map-get($font-size, "ml");
   }
 
   &__wrapper {
@@ -21,7 +23,7 @@
 
   .feedback--left {
     border-radius: 66% 34% 70% 30% / 30% 84% 16% 70%;
-    background-color: $accent-color;
+    background-color: $secondary-color;
     width: 50%;
     animation: feedback-bg 15s linear infinite;
 

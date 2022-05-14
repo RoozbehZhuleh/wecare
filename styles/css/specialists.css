@@ -1,16 +1,15 @@
 .specialists {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin: 5vh 0 0 0;
-  gap: 5vh;
-}
-.specialists h3 {
-  color: rgb(16, 40, 81);
+  gap: 2vh;
 }
 .specialists .sp--title {
   font-size: 4rem;
+  color: rgb(16, 40, 81);
+  font-weight: 500;
 }
 .specialists p {
   color: rgb(154, 161, 170);
