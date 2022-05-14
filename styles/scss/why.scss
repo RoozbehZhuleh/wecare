@@ -1,4 +1,4 @@
-@import "./layout.scss";
+@import "./mixins.scss";
 
 #why {
   background: rgb(216, 232, 255);
@@ -11,26 +11,31 @@
 }
 
 .why {
-  @include flex(row, center, flex-start);
+  @include flex(row, space-between, flex-start);
+  flex-wrap: wrap;
 
   &--left {
     @include flex(row, flex-start, flex-start);
     position: relative;
-    left: -5vw;
-    border-radius: 30% 70% 55% 45% / 88% 27% 73% 12%;
+    // left: -5vw;
+    border-radius: 57% 43% 59% 41% / 100% 53% 47% 0%;
     background-color: $secondary-color;
+    padding: 2rem;
+    animation: why-bg 10s infinite linear;
 
-    img {
-      width: 70rem;
+    .why--doc {
+      width: 32rem;
+      position: relative;
+      top: 2rem;
     }
 
     .floating-card--2 {
       position: relative;
       top: 9vh;
-      left: -10vw;
+      // left: -10vw;
       @include flex(column, center, flex-start);
       gap: 1vh;
-      width: 15vw;
+      width: 25rem;
       background-color: $light-color;
       border-radius: map-get($border-radius, "m");
       padding: 1vh;
@@ -52,7 +57,7 @@
         div {
           @include flex(row, flex-start, center);
           img {
-            width: 30%;
+            width: 4rem;
             border-radius: 100%;
             p {
               color: $dark-color;
@@ -69,12 +74,12 @@
   }
 
   &--right {
-    @include flex(column, center, center);
+    @include flex(column, center, flex-start);
     gap: 1vh;
     position: relative;
     top: 12vh;
-    left: -3vw;
-    width: 60%;
+    // left: -3vw;
+    // width: 60%;
 
     h2 {
       font-size: map-get($font-size, "xl");
@@ -83,7 +88,7 @@
     }
 
     .checkbox {
-      @include flex(column, center, center);
+      @include flex(column, center, flex-start);
       gap: 2vh;
 
       .checkbox-sentence {
@@ -98,17 +103,17 @@
           width: 2vw;
         }
       }
-    }
 
-    button {
-      @include btn;
-      color: map-get($font-color, "secondary");
-      background-color: $accent-color;
+      button {
+        @include btn;
+        color: map-get($font-color, "secondary");
+        background-color: $accent-color;
 
-      &:hover {
-        box-shadow: inset 0 0 0 1px $accent-color;
-        background-color: $light-color;
-        color: map-get($font-color, "primary");
+        &:hover {
+          box-shadow: inset 0 0 0 1px $accent-color;
+          background-color: $light-color;
+          color: map-get($font-color, "primary");
+        }
       }
     }
   }

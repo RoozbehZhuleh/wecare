@@ -1,67 +1,66 @@
-@import "./layout.scss";
+@import "./mixins.scss";
 
 .footer {
-    @include flex(row,center,flex-start);
-    gap: 3vw;
-    width: 100%;
-    padding: 3vw 0;
+  @include flex(row, center, flex-start);
+  gap: 3vw;
+  width: 100%;
+  padding: 3vw 0;
 
-    h4{
-        margin: 0 0 2vh 0;
-        color: $accent-color;
+  h4 {
+    margin: 0 0 2vh 0;
+    color: $accent-color;
+  }
+
+  a {
+    text-decoration: none;
+    color: map-get($font-color, "other");
+  }
+
+  &--1 {
+    @include flex(column, space-between, flex-start);
+    width: 20%;
+
+    .logo {
+      width: 100%;
+      cursor: pointer;
+
+      img {
+        width: 12vw;
+      }
     }
 
-    a{
-        text-decoration: none;
-        color: map-get($font-color, "other" );
-    }
+    .social {
+      @include flex(row, space-between, center);
+      gap: 1vw;
+      font-size: map-get($font-size, "xl");
+      color: map-get($font-color, "primary");
+      cursor: pointer;
 
-    &--1{
-        @include flex(column,space-between,flex-start);
-        width: 20%;
-
-        .logo{
-            width: 100%;
-            cursor: pointer;
-
-            img{
-                width: 12vw;
-            }
+      i {
+        border-radius: map-get($border-radius, "s");
+        transition: all 0.2s linear;
+        padding: 0.5vw;
+        &:hover {
+          background-color: $accent-color;
+          color: $light-color;
         }
-
-        .social{
-            @include flex(row,space-between,center);
-            gap: 1vw;
-            font-size: map-get($font-size, "xl" );
-            color: map-get($font-color, "primary");
-            cursor: pointer;
-            
-            i{
-                border-radius: map-get($border-radius, "s" );
-                transition: all 0.2s linear;
-                padding: 0.5vw;
-                &:hover{
-                    background-color: $accent-color;
-                    color:$light-color;
-                }
-            }
-        }
+      }
     }
+  }
 
-    &--2{
-        width: 50%;
-        @include flex(row,space-between,center);
+  &--2 {
+    width: 50%;
+    @include flex(row, space-between, center);
 
-        .footer__links{
-            @include flex(column, center, center);
-            gap: 1vh;
+    .footer__links {
+      @include flex(column, center, center);
+      gap: 1vh;
 
-            a{
-                &:hover{
-                    color: map-get($font-color, "primary");
-                }
-            }
+      a {
+        &:hover {
+          color: map-get($font-color, "primary");
         }
+      }
     }
-
+  }
 }

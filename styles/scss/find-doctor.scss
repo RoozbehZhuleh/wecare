@@ -1,12 +1,12 @@
-@import "./layout.scss";
+@import "./mixins.scss";
 
 .find__wrapper {
   @include flex(row, flex-end, center);
-  gap: 1vw;
+  gap: 3rem;
   width: 99%;
 
   .find--left {
-    @include flex(column, flex-start, center);
+    @include flex(column, flex-start, flex-start);
     gap: 2vh;
     width: 30%;
 
@@ -37,7 +37,7 @@
         &::after {
           content: "";
           width: 1rem;
-          height: 5rem;
+          height: 65rem;
           border: 1px solid $secondary-color;
           position: relative;
           left: -50%;
@@ -71,12 +71,14 @@
     z-index: -1;
     top: 5vh;
     left: 4vw;
+    -webkit-animation: blob 30s infinite;
     animation: blob 30s infinite;
   }
   .find--doctor {
     position: absolute;
+    left: 60%;
     z-index: 1;
-    width: 75rem;
+    width: 40rem;
   }
 
   .floating-card {
@@ -99,6 +101,7 @@
     // box-shadow: 0.1rem 0.1rem 1rem $accent-color;
     &:hover {
       // background-color: $light-color;
+      -webkit-animation: wiggle 1s infinite;
       animation: wiggle 1s infinite;
     }
 
@@ -123,7 +126,7 @@
       @include flex(row, flex-start, center);
       // gap: 3rem;
       padding: 0.5vh 1vw;
-      background-color: $light-color;
+      background-color: $third-color;
       width: 18rem;
 
       img {
@@ -134,6 +137,7 @@
         padding: 0.5vw;
         width: 70%;
         border: none;
+        background-color: $third-color;
       }
     }
   }

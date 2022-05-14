@@ -1,98 +1,97 @@
-@import "./layout.scss";
+@import "./mixins.scss";
 
-.feedback{
+.feedback {
+  @include flex(column, center, center);
+  margin: 10vh 0 0 0;
+  gap: 3vh;
+  width: 100%;
+
+  h3 {
+    font-size: map-get($font-size, "2xl");
+    color: $accent-color;
+  }
+
+  p {
+    color: map-get($font-color, "other");
+  }
+
+  &__wrapper {
+    @include flex(row, center, center);
+  }
+
+  .feedback--left {
+    border-radius: 66% 34% 70% 30% / 30% 84% 16% 70%;
+    background-color: $accent-color;
+    width: 50%;
+    animation: feedback-bg 15s linear infinite;
+
+    img {
+      width: 90%;
+    }
+  }
+
+  .feedback--right {
+    width: 50%;
     @include flex(column, center, center);
-    margin: 10vh 0 0 0;
-    gap: 3vh;
-    width: 100%;
+    gap: 8vh;
 
+    .patient-profile {
+      @include flex(row, flex-start, center);
+      gap: 3rem;
+      width: 80%;
+      border: 0.5px solid $accent-color;
+      border-radius: map-get($border-radius, "l");
+      padding: 1rem 1rem;
+      background-color: $third-color;
+      box-shadow: 1px 1px 5px $accent-color;
 
-    h3{
-        font-size: map-get($font-size, "2xl" );
+      .patient-img {
+        width: 30%;
+
+        img {
+          border-radius: 100%;
+          border: 1px solid $accent-color;
+          position: relative;
+          // left: -3vw;
+          width: 10rem;
+        }
+      }
+
+      .patient-text {
+        @include flex(column, center, flex-start);
+        gap: 1vh;
+        width: 70%;
+
+        .patient-name {
+          font-size: map-get($font-size, "l");
+          color: map-get($font-color, "primary");
+        }
+        .patient-location {
+          color: map-get($font-color, "other");
+        }
+        .patient-stars {
+          width: 100%;
+
+          .star {
+            width: 10%;
+          }
+        }
+      }
+    }
+
+    .patient-comment {
+      color: map-get($font-color, "other");
+      width: 90%;
+    }
+
+    .slider {
+      @include flex(row, center, center);
+      gap: 1vw;
+      cursor: pointer;
+
+      i {
         color: $accent-color;
+      }
     }
-
-    p{
-        color: map-get($font-color, "other");
-    }
-
-    &__wrapper{
-        @include flex(row, center, center);
-    }
-    
-    .feedback--left{
-        border-radius: 66% 34% 70% 30% / 30% 84% 16% 70%;
-        background-color: rgba(80, 255, 214, 0.308);
-        // border: 1px solid black;
-        width: 50%;
-
-        img{
-            width: 90%;
-        }
-    }
-
-    .feedback--right{
-        width: 50%;
-        @include flex(column, center, center);
-        gap: 8vh;
-
-        .patient-profile{
-            @include flex(row, flex-start, center);
-            gap: 4vw;
-            width: 80%;
-            border: 0.5px solid $accent-color;
-            border-radius: map-get($border-radius, "l" );
-            padding: 2vw 0;
-            background-color:$third-color;
-            box-shadow: 0.1rem 0.1rem 1rem $accent-color;
-
-            .patient-img{
-                // @include flex(row, flex-start, flex-start);
-                border-radius: map-get($border-radius , "l" );
-                width: 30%;
-                
-                img{
-                    position:relative;
-                    left: -3vw;
-                    width: 20vw;
-                }
-            }
-
-            .patient-text{
-                @include flex(column, center, flex-start);
-                gap: 1vh;
-                width: 70%;
-
-                .patient-name{
-                    font-size: map-get($font-size, "l" );
-                    color: map-get($font-color, "primary" );
-                }
-                .patient-location{
-                    color: map-get($font-color, "other");
-                }
-                .patient-stars{
-                    width: 100%;
-
-                    .star{
-                        width: 10%;
-                    }
-                }
-            }
-        }
-
-        .patient-comment{
-            color: map-get($font-color, "other");
-            width: 90%;
-        }
-
-        .slider{
-            @include flex(row, center, center);
-            gap: 1vw;
-            cursor: pointer;
-
-            i{
-                color: $accent-color;
-            }
-        }
-    }
+  }
 }

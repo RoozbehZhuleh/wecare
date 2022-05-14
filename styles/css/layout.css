@@ -9,32 +9,6 @@
   -webkit-box-sizing: border-box;
 }
 
-:root {
-  --primary-color: $primary-color;
-  --secondary-color: $secondary-color;
-  --third-color: $third-color;
-  --accent-color: $accent-color;
-  --light-color: $light-color;
-  --dark-color: $dark-color;
-  --font-primary-color: map-get($font-color, "primary");
-  --font-secondary-color: map-get($font-color, "secondary");
-  --font-other-color: map-get($font-color, "other");
-  --font-s: map-get($font-size, "s");
-  --font-m: map-get($font-size, "m");
-  --font-ml: map-get($font-size, "ml");
-  --font-l: map-get($font-size, "l");
-  --font-xl: map-get($font-size, "xl");
-  --font-2xl: map-get($font-size, "2xl");
-  --font-3xl: map-get($font-size, "3xl");
-  --font-weight-thin: map-get($font-weight, "thin");
-  --font-weight-regular: map-get($font-weight, "regular");
-  --font-weight-medium: map-get($font-weight, "medium");
-  --font-weight-bold: map-get($font-weight, "bold");
-  --border-radius-s: map-get($border-radius, "s");
-  --border-radius-m: map-get($border-radius, "m");
-  --border-radius-l: map-get($border-radius, "l");
-}
-
 html {
   font-size: 62.5%;
   font-family: "ًRoboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -64,7 +38,8 @@ a {
 }
 
 .container {
-  width: 100%;
+  width: 1400px;
+  max-width: 90%;
   margin-right: auto;
   margin-left: auto;
   padding: 0 1rem;
@@ -85,6 +60,10 @@ input {
   outline: none;
 }
 
+section {
+  padding: 3rem 0 0 0;
+}
+
 @-webkit-keyframes circle {
   0% {
     transform: rotate(0);
@@ -99,6 +78,23 @@ input {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 @keyframes wiggle {
@@ -118,6 +114,20 @@ input {
     transform: rotate(0deg);
   }
 }
+@-webkit-keyframes thumb {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 @keyframes thumb {
   0% {
     transform: rotate(0deg);
@@ -132,7 +142,23 @@ input {
     transform: rotate(0deg);
   }
 }
+@-webkit-keyframes star {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes star {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes blob {
   0% {
     transform: rotate(0deg);
   }
@@ -146,6 +172,46 @@ input {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes why-bg {
+  0% {
+    border-radius: 57% 43% 59% 41%/100% 53% 47% 0%;
+  }
+  25% {
+    border-radius: 24% 76% 17% 83%/93% 39% 61% 7%;
+  }
+  50% {
+    border-radius: 24% 76% 6% 94%/100% 39% 61% 0%;
+  }
+  75% {
+    border-radius: 33% 67% 61% 39%/52% 81% 19% 48%;
+  }
+  90% {
+    border-radius: 44% 56% 49% 51%/52% 39% 61% 48%;
+  }
+  100% {
+    border-radius: 57% 43% 59% 41%/100% 53% 47% 0%;
+  }
+}
+@keyframes feedback-bg {
+  0% {
+    border-radius: 66% 34% 70% 30%/30% 84% 16% 70%;
+  }
+  25% {
+    border-radius: 24% 76% 17% 83%/93% 39% 61% 7%;
+  }
+  50% {
+    border-radius: 24% 76% 6% 94%/100% 39% 61% 0%;
+  }
+  75% {
+    border-radius: 33% 67% 61% 39%/52% 81% 19% 48%;
+  }
+  90% {
+    border-radius: 44% 56% 49% 51%/52% 39% 61% 48%;
+  }
+  100% {
+    border-radius: 66% 34% 70% 30%/30% 84% 16% 70%;
   }
 }
 * {

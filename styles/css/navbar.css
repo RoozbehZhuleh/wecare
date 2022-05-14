@@ -1,174 +1,4 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Square+Peg&display=swap");
-*,
-*::after,
-*::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-:root {
-  --primary-color: $primary-color;
-  --secondary-color: $secondary-color;
-  --third-color: $third-color;
-  --accent-color: $accent-color;
-  --light-color: $light-color;
-  --dark-color: $dark-color;
-  --font-primary-color: map-get($font-color, "primary");
-  --font-secondary-color: map-get($font-color, "secondary");
-  --font-other-color: map-get($font-color, "other");
-  --font-s: map-get($font-size, "s");
-  --font-m: map-get($font-size, "m");
-  --font-ml: map-get($font-size, "ml");
-  --font-l: map-get($font-size, "l");
-  --font-xl: map-get($font-size, "xl");
-  --font-2xl: map-get($font-size, "2xl");
-  --font-3xl: map-get($font-size, "3xl");
-  --font-weight-thin: map-get($font-weight, "thin");
-  --font-weight-regular: map-get($font-weight, "regular");
-  --font-weight-medium: map-get($font-weight, "medium");
-  --font-weight-bold: map-get($font-weight, "bold");
-  --border-radius-s: map-get($border-radius, "s");
-  --border-radius-m: map-get($border-radius, "m");
-  --border-radius-l: map-get($border-radius, "l");
-}
-
-html {
-  font-size: 62.5%;
-  font-family: "ًRoboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  margin-right: auto;
-  margin-left: auto;
-  font-size: 1.5rem;
-  background: linear-gradient(141deg, rgb(255, 255, 255) 0%, #eefcff 51%, #f2f2f2 75%);
-}
-
-button {
-  cursor: pointer;
-  font-family: inherit;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 1rem;
-}
-
-.btn__primary {
-  background-color: var(--primary-color);
-  color: var(--light-color);
-}
-
-.btn__primary:hover {
-  background: transparent;
-  color: var(--dark-color);
-  box-shadow: inset 0 0 0 0.2rem var(--primary-color);
-}
-
-input {
-  outline: none;
-}
-
-@-webkit-keyframes circle {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes circle {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes wiggle {
-  0% {
-    transform: rotate(0deg);
-  }
-  80% {
-    transform: rotate(0deg);
-  }
-  85% {
-    transform: rotate(5deg);
-  }
-  95% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes thumb {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(45deg);
-  }
-  75% {
-    transform: rotate(-45deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes star {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes blob {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-* {
-  scrollbar-width: auto;
-  scrollbar-color: #2d5deb #ffffff;
-}
-
-*::-webkit-scrollbar {
-  width: 15px;
-}
-
-*::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #2d5deb;
-  border-radius: 10px;
-  border: 3px ridge #9d9bbb;
-}
-
 #header {
-  width: 100%;
   position: relative;
   height: 80vh;
   top: 1vh;
@@ -178,15 +8,15 @@ input {
 }
 
 #nav {
-  width: 100%;
   background-color: transparent;
 }
 
 .nav {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 99%;
   background-color: transparent;
   position: relative;
   top: 2vh;

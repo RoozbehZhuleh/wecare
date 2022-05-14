@@ -1,4 +1,4 @@
-@import "./layout.scss";
+@import "./mixins.scss";
 
 #popular-search {
   width: 100%;
@@ -7,7 +7,6 @@
 .popular-search {
   @include flex(column, center, flex-start);
   // width:90%;
-  padding: 2rem 5rem;
 
   h2 {
     position: relative;

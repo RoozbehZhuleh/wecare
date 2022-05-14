@@ -1,53 +1,55 @@
-@import "./layout.scss";
+@import "./mixins.scss";
 
 .search {
-  position: relative;
   @include flex(column, space-around, center);
-  gap: 2rem;
-  width: 90%;
-  height: 28rem;
+  position: relative;
   top: -8vh;
-  left: 5%;
+  gap: 2rem;
+  height: 28rem;
   background-color: $light-color;
-  padding: 2rem 0;
+  padding: 2rem 2rem;
   z-index: 10;
-  box-shadow: 0.1rem 0.1rem 1rem $dark-color;
+  box-shadow: 1px 1px 5px $accent-color;
   border-radius: map-get($border-radius, "l");
 
   &__bars {
-    @include flex(row, space-around, center);
+    @include flex(row, center, center);
     width: 95%;
     gap: 1rem;
 
     &--doctor {
       @include flex(row, flex-start, center);
       width: 45%;
-      border: 1px solid $dark-color;
+      border: 1px solid $accent-color;
       padding: 0.5rem;
-      background-color: $primary-color;
+      background-color: $third-color;
       border-radius: map-get($border-radius, "s");
+      min-width: 30rem;
 
       input {
         width: 85%;
-        padding: 0.8rem 8rem;
+        padding: 0.8rem;
         border: none;
-        background-color: $primary-color;
+        background-color: $third-color;
+        font-size: map-get($font-size, "l");
       }
     }
 
     &--location {
       @include flex(row, flex-start, center);
       width: 45%;
-      border: 1px solid black;
+      border: 1px solid $accent-color;
       padding: 0.5rem;
-      background-color: $primary-color;
+      background-color: $third-color;
       border-radius: map-get($border-radius, "s");
+      min-width: 30rem;
 
       input {
         width: 85%;
-        padding: 1rem 8rem;
+        padding: 0.8rem;
         border: none;
-        background-color: $primary-color;
+        background-color: $third-color;
+        font-size: map-get($font-size, "l");
       }
     }
 
@@ -55,6 +57,7 @@
       @include btn;
       width: 9rem;
       border: 1px solid $accent-color;
+      background-color: transparent;
 
       &:hover {
         background-color: $secondary-color;
@@ -67,23 +70,29 @@
   }
 
   &__looking {
-    @include flex(column, space-around, flex-start);
-    width: 90%;
+    @include flex(column, flex-start, flex-start);
+    width: 94%;
+    gap: 1rem;
 
     h3 {
-      color: $dark-color;
+      color: $accent-color;
       margin: 1rem 0;
+      font-size: map-get($font-size, "l");
     }
 
     &__tags {
       @include flex(row, center, center);
+      flex-wrap: wrap;
       gap: 1rem;
 
       button {
         @include btn;
         background-color: $third-color;
         text-decoration: none;
-        color: $accent-color;
+        color: $dark-color;
+        padding: 0.8rem 1rem;
+        font-size: map-get($font-size, "ml");
+        border-radius: map-get($border-radius, "m");
       }
 
       .tag__wrapper {
@@ -91,10 +100,10 @@
         cursor: pointer;
         padding: 0.5rem;
         border-radius: map-get($border-radius, "m");
-        background-color: $primary-color;
+        background-color: $third-color;
 
         p {
-          font-size: map-get($font-size, "m");
+          font-size: map-get($font-size, "ml");
           color: $accent-color;
         }
 
