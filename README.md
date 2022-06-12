@@ -1,8 +1,7 @@
-# wecare
+# We.Care
 
 
-##Intro
-
+## Intro
 This is a wesbite with the goal of helping promote businesses active in the medical field, that provide medical services to the users, facilitating and increasing accessibility to specialists 24/7.
 
 ## Content
